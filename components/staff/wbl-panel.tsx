@@ -77,7 +77,7 @@ export function WblPanel({
 
   return (
     <div className="space-y-5">
-      <div className="grid gap-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-[1.2fr_1.2fr_1fr_0.7fr_auto] sm:items-end">
+      <div className="grid gap-3 rounded-2xl border border-border bg-card p-5 sm:grid-cols-2 lg:grid-cols-[1.2fr_1.2fr_1fr_0.7fr_auto] lg:items-end">
         <div className="space-y-1.5">
           <Label>Type</Label>
           <Select value={type} onValueChange={(v) => setType(v as WblType)}>

@@ -43,7 +43,7 @@ export function ActivityFeed({ items }: { items: FeedItem[] }) {
         return (
           <li
             key={it.id}
-            className="flex items-center gap-3 rounded-xl px-2 py-2.5 transition-colors hover:bg-raised"
+            className="flex flex-col gap-1 rounded-xl px-2 py-2.5 transition-colors hover:bg-raised sm:flex-row sm:items-center sm:gap-3"
           >
             <div className="relative">
               <Avatar className="h-9 w-9">
@@ -53,7 +53,7 @@ export function ActivityFeed({ items }: { items: FeedItem[] }) {
                 <Icon className={`h-3 w-3 ${tint}`} />
               </span>
             </div>
-            <p className="flex-1 text-sm text-muted-foreground">
+            <p className="min-w-0 flex-1 text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{it.name}</span>{" "}
               {it.action}{" "}
               <span className="font-medium text-foreground">{it.entity}</span>

@@ -33,8 +33,8 @@ export function ParticipantTabs({ detail }: { detail: ParticipantDetail }) {
 
   return (
     <Tabs defaultValue="Overview" className="w-full">
-      <div className="overflow-x-auto pb-1 no-scrollbar">
-        <TabsList>
+      <div className="overflow-x-auto pb-1">
+        <TabsList className="inline-flex w-max flex-nowrap">
           {TABS.map((t) => (
             <TabsTrigger key={t} value={t}>
               {t}

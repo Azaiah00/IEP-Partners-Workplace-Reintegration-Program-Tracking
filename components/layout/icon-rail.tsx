@@ -70,7 +70,8 @@ export function IconRail({
 
   return (
     <TooltipProvider delayDuration={150}>
-      <aside className="sticky top-0 z-30 flex h-screen w-[72px] shrink-0 flex-col items-center border-r border-border bg-card py-5">
+      {/* Hidden on mobile — MobileNav drawer replaces this below md */}
+      <aside className="sticky top-0 z-30 hidden h-screen w-[72px] shrink-0 flex-col items-center border-r border-border bg-card py-5 md:flex">
         <Link
           href={homeHref}
           className="mb-8 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 ring-1 ring-primary/20 transition hover:bg-primary/20"

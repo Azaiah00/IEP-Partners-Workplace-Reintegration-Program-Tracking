@@ -138,7 +138,7 @@ export default function Landing() {
         </section>
 
         {/* Outcomes strip */}
-        <section className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <section className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: GraduationCap, label: "Curriculum tracking" },
             { icon: Briefcase, label: "Employer engagement" },

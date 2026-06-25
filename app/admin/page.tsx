@@ -115,7 +115,7 @@ export default async function AdminDashboard() {
               Program Health
             </span>
           </div>
-          <div className="mt-2 flex items-center gap-3">
+          <div className="mt-2 flex flex-col items-center gap-3 sm:flex-row">
             <RadialProgress
               value={k.programHealth}
               size={92}
@@ -136,12 +136,12 @@ export default async function AdminDashboard() {
       {/* Trend + tier distribution */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <CardHeader className="flex-row items-center justify-between space-y-0">
+          <CardHeader className="flex flex-col gap-3 space-y-0 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <CardTitle>Enrollment &amp; Completion</CardTitle>
               <CardDescription>Cumulative over the last 10 weeks</CardDescription>
             </div>
-            <div className="flex items-center gap-4 text-xs text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground sm:gap-4">
               <span className="flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-primary" /> Enrolled
               </span>

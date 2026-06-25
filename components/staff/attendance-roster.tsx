@@ -90,7 +90,7 @@ export function AttendanceRoster({
           <span className="text-sm text-muted-foreground">
             {markedCount} of {rows.length} marked
           </span>
-          <Button onClick={markAllPresent} disabled={pending} variant="secondary" size="sm">
+          <Button onClick={markAllPresent} disabled={pending} variant="secondary" size="sm" className="w-full sm:w-auto">
             {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
             Mark remaining present
           </Button>
@@ -99,16 +99,21 @@ export function AttendanceRoster({
 
       <div className="divide-y divide-border rounded-2xl border border-border bg-card">
         {rows.map((r) => (
-          <div key={r.id} className="flex items-center gap-3 px-4 py-3">
-            <Avatar className="h-9 w-9">
-              <AvatarFallback>{initials(r.name)}</AvatarFallback>
-            </Avatar>
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-medium text-foreground">{r.name}</p>
-              <p className="text-xs text-muted-foreground">{r.code}</p>
+          <div
+            key={r.id}
+            className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center"
+          >
+            <div className="flex min-w-0 flex-1 items-center gap-3">
+              <Avatar className="h-9 w-9 shrink-0">
+                <AvatarFallback>{initials(r.name)}</AvatarFallback>
+              </Avatar>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm font-medium text-foreground">{r.name}</p>
+                <p className="text-xs text-muted-foreground">{r.code}</p>
+              </div>
+              <TierBadge tier={r.tier} />
             </div>
-            <TierBadge tier={r.tier} />
-            <div className="flex gap-1.5">
+            <div className="flex shrink-0 gap-1.5 self-end sm:self-center">
               {OPTS.map((o) => {
                 const active = marks[r.id] === o.value;
                 const isBusy = busy === r.id + o.value && pending;

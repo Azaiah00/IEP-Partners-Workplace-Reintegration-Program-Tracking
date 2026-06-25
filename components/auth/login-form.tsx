@@ -109,7 +109,7 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
           Demo accounts — click to fill (password{" "}
           <span className="font-mono text-foreground">Demo1234!</span>)
         </p>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
           {DEMO.map((d) => (
             <button
               key={d.email}

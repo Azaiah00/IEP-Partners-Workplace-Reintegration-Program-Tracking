@@ -44,7 +44,7 @@ export default async function MyGoalsPage() {
             {o.goals.map((g) => (
               <div
                 key={g.id}
-                className="flex items-center justify-between gap-3 rounded-xl border border-border px-4 py-3"
+                className="flex flex-col gap-2 rounded-xl border border-border px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
               >
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-foreground">{g.title}</p>

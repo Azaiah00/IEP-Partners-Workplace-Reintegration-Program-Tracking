@@ -16,7 +16,7 @@ export function DonutChart({
 }) {
   const total = data.reduce((s, d) => s + d.value, 0);
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
       <div className="relative" style={{ width: height, height }}>
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -53,7 +53,7 @@ export function DonutChart({
           ) : null}
         </div>
       </div>
-      <ul className="space-y-2">
+      <ul className="w-full space-y-2 sm:w-auto">
         {data.map((d) => (
           <li key={d.name} className="flex items-center gap-2 text-sm">
             <span
