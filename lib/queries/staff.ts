@@ -12,6 +12,7 @@ import type {
   CaseNote,
   TransitionPlan,
   DocumentRow,
+  Employer,
   Outcome,
 } from "@/types/db";
 
@@ -292,13 +293,15 @@ export async function getRosterForDate(date: string) {
   }));
 }
 
-export async function getEmployers() {
+/** All employer records for staff/admin employer and WBL pages. */
+export async function getEmployers(): Promise<Employer[]> {
   const sb = createClient();
   const { data } = await sb
     .from("employers")
     .select("*")
     .order("created_at", { ascending: false });
-  return data ?? [];
+  // Explicit cast — Supabase inference can collapse to never[] on some CI builds.
+  return (data ?? []) as Employer[];
 }
 
 export async function getWblList() {

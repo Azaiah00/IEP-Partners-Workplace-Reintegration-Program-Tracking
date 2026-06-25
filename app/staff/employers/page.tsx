@@ -2,13 +2,12 @@ import { requireRole } from "@/lib/auth";
 import { getEmployers } from "@/lib/queries/staff";
 import { PageHeader } from "@/components/layout/page-header";
 import { EmployersManager } from "@/components/staff/employers-manager";
-import type { Employer } from "@/types/db";
 
 export const metadata = { title: "Employer Engagement · IEP Partners" };
 
 export default async function EmployersPage() {
   await requireRole(["staff", "admin"]);
-  const employers = (await getEmployers()) as Employer[];
+  const employers = await getEmployers();
   return (
     <>
       <PageHeader
