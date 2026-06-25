@@ -3,12 +3,16 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
-import type { DocType } from "@/types/db";
+import type { Database, DocType } from "@/types/db";
 
 type Result = { ok: true } | { ok: false; error: string };
 type UrlResult = { ok: true; url: string } | { ok: false; error: string };
 
-async function myParticipantId(sb: ReturnType<typeof createClient>) {
+type DocumentInsert = Database["public"]["Tables"]["documents"]["Insert"];
+
+/** Resolve the signed-in user's participant row (RLS-scoped). */
+async function myParticipantId() {
+  const sb = createClient();
   const {
     data: { user },
   } = await sb.auth.getUser();
@@ -18,8 +22,10 @@ async function myParticipantId(sb: ReturnType<typeof createClient>) {
     .select("id")
     .eq("profile_id", user.id)
     .maybeSingle();
-  if (!data) throw new Error("No participant record for this account");
-  return { participantId: data.id, userId: user.id };
+  // Explicit row type — avoids never inference on some CI TypeScript builds.
+  const row = data as { id: string } | null;
+  if (!row) throw new Error("No participant record for this account");
+  return { participantId: row.id, userId: user.id, sb };
 }
 
 const docSchema = z.object({
@@ -34,15 +40,15 @@ export async function addParticipantDocument(
 ): Promise<Result> {
   try {
     const data = docSchema.parse(input);
-    const sb = createClient();
-    const { participantId, userId } = await myParticipantId(sb);
-    const { error } = await sb.from("documents").insert({
+    const { participantId, userId, sb } = await myParticipantId();
+    const payload: DocumentInsert = {
       participant_id: participantId,
       type: data.type,
       title: data.title,
       storage_path: data.storagePath,
       uploaded_by: userId,
-    });
+    };
+    const { error } = await sb.from("documents").insert(payload);
     if (error) throw error;
     revalidatePath("/me/documents");
     revalidatePath("/me");
