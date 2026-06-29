@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { IepMark } from "@/components/brand/iep-mark";
 import { LoginForm } from "@/components/auth/login-form";
+import { Button } from "@/components/ui/button";
 import { getSessionProfile, homePathForRole } from "@/lib/auth";
 
 export const metadata = { title: "Sign in · IEP Partners" };
@@ -16,6 +18,13 @@ export default async function LoginPage({
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-10">
+      {/* Always-visible escape hatch back to the public landing page */}
+      <div className="absolute left-4 top-4 z-10 sm:left-6 sm:top-6">
+        <Button asChild variant="secondary" size="lg" className="shadow-sm">
+          <Link href="/">&larr; Back to home</Link>
+        </Button>
+      </div>
+
       {/* ambient accent glow */}
       <div
         aria-hidden
@@ -40,6 +49,12 @@ export default async function LoginPage({
             </p>
           </div>
           <LoginForm redirectTo={searchParams.redirectedFrom} />
+
+          <div className="mt-6 border-t border-border pt-6">
+            <Button asChild variant="outline" size="lg" className="w-full border-primary/30 text-base">
+              <Link href="/">&larr; Back to home</Link>
+            </Button>
+          </div>
         </div>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
