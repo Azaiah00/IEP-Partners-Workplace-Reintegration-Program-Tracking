@@ -183,7 +183,8 @@ const TIER_ORDER: Record<ProgramTier, number> = {
   tier_3: 3,
 };
 
-const REGIONS = ["Atlanta Metro", "Savannah", "Augusta", "Columbus", "Macon"];
+// Virginia labor-market regions — must match supabase/content/va_jobs.json.
+const REGIONS = ["Hampton Roads", "Richmond Metro", "Tri-Cities", "Southside"];
 const REFERRALS = [
   "Detention",
   "Correctional Facility",
@@ -251,14 +252,14 @@ const SUPPORT = [
 const NOTE_CATEGORIES = ["Check-in", "Attendance", "Employment", "Barrier", "Support Service"];
 
 const EMPLOYERS: { name: string; industry: string; stage: EmployerStage; region: string }[] = [
-  { name: "Lakeside Logistics", industry: "Warehousing & Distribution", stage: "hiring", region: "Atlanta Metro" },
-  { name: "Peachtree Manufacturing", industry: "Manufacturing", stage: "partner", region: "Macon" },
-  { name: "Savannah Port Services", industry: "Logistics", stage: "partner", region: "Savannah" },
-  { name: "Magnolia Health Group", industry: "Healthcare", stage: "hiring", region: "Augusta" },
-  { name: "Coastal Hospitality Group", industry: "Hospitality", stage: "contacted", region: "Savannah" },
-  { name: "Summit Auto Care", industry: "Automotive Services", stage: "partner", region: "Columbus" },
-  { name: "Riverside Construction Co.", industry: "Construction", stage: "prospect", region: "Atlanta Metro" },
-  { name: "BrightPath Staffing", industry: "Staffing & Placement", stage: "partner", region: "Atlanta Metro" },
+  { name: "Lakeside Logistics", industry: "Warehousing & Distribution", stage: "hiring", region: "Hampton Roads" },
+  { name: "Commonwealth Manufacturing", industry: "Manufacturing", stage: "partner", region: "Richmond Metro" },
+  { name: "Hampton Roads Port Services", industry: "Logistics", stage: "partner", region: "Hampton Roads" },
+  { name: "Magnolia Health Group", industry: "Healthcare", stage: "hiring", region: "Tri-Cities" },
+  { name: "Coastal Hospitality Group", industry: "Hospitality", stage: "contacted", region: "Hampton Roads" },
+  { name: "Summit Auto Care", industry: "Automotive Services", stage: "partner", region: "Richmond Metro" },
+  { name: "Riverside Construction Co.", industry: "Construction", stage: "prospect", region: "Tri-Cities" },
+  { name: "BrightPath Staffing", industry: "Staffing & Placement", stage: "partner", region: "Richmond Metro" },
 ];
 
 // 24 participants. Index 0 is the documented demo login.
