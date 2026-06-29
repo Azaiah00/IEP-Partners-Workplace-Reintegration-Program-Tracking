@@ -3,10 +3,17 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { requireRole } from "@/lib/auth";
 import { getParticipantDetail } from "@/lib/queries/staff";
+import { getParticipantCourseSummary } from "@/lib/queries/courses";
+import {
+  getTopMatchesForParticipant,
+  getApplicationsForParticipant,
+} from "@/lib/queries/jobs";
+import { ParticipantJobPanel } from "@/components/jobs/participant-job-panel";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { TierBadge, StatusBadge } from "@/components/shared/badges";
 import { ParticipantTabs } from "@/components/staff/participant-tabs";
-import { initials } from "@/lib/utils";
+import { PdfButton } from "@/components/reports/pdf-button";
+import { initials, humanize } from "@/lib/utils";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const detail = await getParticipantDetail(params.id);
@@ -22,6 +29,56 @@ export default async function ParticipantDetailPage({
   const detail = await getParticipantDetail(params.id);
   if (!detail) notFound();
   const p = detail.participant;
+  const courseSummary = await getParticipantCourseSummary(params.id);
+  const [topMatches, jobApplications] = await Promise.all([
+    getTopMatchesForParticipant(params.id, 3),
+    getApplicationsForParticipant(params.id),
+  ]);
+
+  // Curriculum completion from lesson progress (mirrors caseload calc).
+  const totalLessons = detail.lessons.length;
+  const doneLessons = detail.lessons.filter((l) => l.status === "completed").length;
+  const completion = totalLessons
+    ? Math.round((doneLessons / totalLessons) * 100)
+    : 0;
+
+  const reportData = {
+    code: p.participant_code,
+    name: p.name,
+    tier: humanize(p.current_tier),
+    status: humanize(p.status),
+    region: p.region ?? "Unassigned",
+    staffName: p.staffName,
+    intakeDate: p.intake_date,
+    completion,
+    goals: detail.goals.map((g) => ({
+      title: g.title,
+      status: humanize(g.status),
+    })),
+    milestones: detail.milestones.map((m) => ({
+      name: m.name,
+      status: humanize(m.status),
+    })),
+    outcome: detail.outcome
+      ? {
+          status: humanize(detail.outcome.employment_status),
+          jobTitle: detail.outcome.job_title,
+          wage: detail.outcome.hourly_wage,
+        }
+      : null,
+    courses: {
+      enrolled: courseSummary.enrolled,
+      completed: courseSummary.completed,
+      quizzesPassed: courseSummary.quizzesPassed,
+      avgQuizScore: courseSummary.avgQuizScore,
+      rows: courseSummary.courses.map((c) => ({
+        title: c.title,
+        status: humanize(c.status),
+        completion: c.completionPct,
+        bestQuizScore: c.bestQuizScore,
+      })),
+    },
+  };
 
   return (
     <>
@@ -45,13 +102,32 @@ export default async function ParticipantDetailPage({
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <TierBadge tier={p.current_tier} />
           <StatusBadge status={p.status} />
+          <PdfButton
+            mode="participant"
+            data={reportData}
+            subtitle={`${p.participant_code} · ${p.region ?? "Unassigned"}`}
+            label="Download PDF"
+          />
         </div>
       </div>
 
-      <ParticipantTabs detail={detail} />
+      <ParticipantTabs detail={detail} courseSummary={courseSummary} />
+
+      <ParticipantJobPanel
+        participantId={p.id}
+        readiness={{
+          has_drivers_license: p.has_drivers_license,
+          has_cdl: p.has_cdl,
+          cdl_class: p.cdl_class,
+          transportation_ok: p.transportation_ok,
+          bonding_eligible: p.bonding_eligible,
+        }}
+        topMatches={topMatches}
+        applications={jobApplications}
+      />
     </>
   );
 }

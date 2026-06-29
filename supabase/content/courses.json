@@ -1,0 +1,971 @@
+{
+  "courses": [
+    {
+      "slug": "workplace-readiness-foundations",
+      "track": "workforce_readiness",
+      "title": "Workplace Readiness Foundations",
+      "description": "Build the core job-search and on-the-job skills employers expect: a strong resume, confident interviewing, professionalism, and clear workplace communication.",
+      "tier": "tier_1",
+      "is_trade": false,
+      "icon": "Briefcase",
+      "est_hours": 6,
+      "sequence": 1,
+      "lessons": [
+        {
+          "slug": "building-your-resume",
+          "title": "Building a Resume That Gets Read",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "A resume is a short summary of what you can do for an employer. Most hiring managers spend less than 30 seconds on a first look, so yours needs to be clear, honest, and easy to scan.\n\nStart with your name and contact information at the top. Then list your work history, with the most recent job first. For each job, give the job title, the employer, the dates, and two or three bullet points describing what you did. Use action words like *operated*, *built*, *served*, or *organized*.\n\nIf you have gaps in your work history, you are not alone, and you do not have to explain them on the resume itself. Focus on the skills you have. Time spent learning a trade, volunteering, or completing a program all count as real experience.\n\nKeep these tips in mind:\n\n- Keep it to one page when you can.\n- Use the same simple font throughout.\n- List skills that match the job you want.\n- Check spelling carefully, then have someone else check it too.\n\nA good resume does not have to be fancy. It has to be honest, organized, and focused on what you bring to the team."
+        },
+        {
+          "slug": "interview-preparation",
+          "title": "Preparing for the Interview",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "An interview is a conversation, not a test. The employer wants to know if you can do the job and if you will be reliable and easy to work with.\n\nBefore you go, learn a little about the company. Know what they do and why you want to work there. Plan to arrive 10 to 15 minutes early. Dress one step nicer than the job requires, and bring a copy of your resume.\n\nMany interviewers ask behavior questions, such as \"Tell me about a time you solved a problem.\" A simple way to answer is the STAR method:\n\n- **Situation:** Briefly describe the setting.\n- **Task:** Explain what needed to be done.\n- **Action:** Say what you did.\n- **Result:** Share how it turned out.\n\nPractice answering out loud so the words feel natural. It is okay to pause and think before you answer.\n\nMost importantly, be honest and stay positive. If you are asked about your background, you can answer briefly, focus on the growth and skills you have gained, and steer the conversation back to the job. Confidence comes from preparation, so practice and you will walk in ready."
+        },
+        {
+          "slug": "professionalism-on-the-job",
+          "title": "Professionalism on the Job",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Professionalism means showing up as someone your team can count on. It is built from small habits that add up to a strong reputation.\n\nThe most important habit is being on time. Showing up when you are scheduled, and ready to work, tells your employer you respect their business. If you must miss work, call ahead following your workplace rules. Never just not show up, which is called a no-call, no-show, and it is one of the fastest ways to lose a job.\n\nOther key habits include:\n\n- Dressing the way your workplace expects.\n- Keeping your phone put away during work time.\n- Following safety rules every single time.\n- Treating coworkers and customers with respect.\n- Owning your mistakes and learning from them.\n\nA good attitude matters as much as skill. Employers notice the person who stays positive, helps without being asked, and keeps trying when work gets hard. You will not be perfect every day, and that is okay. What counts is a steady effort and a willingness to grow. Over time, these habits earn you trust, better assignments, and chances to move up."
+        },
+        {
+          "slug": "workplace-communication",
+          "title": "Communicating Clearly at Work",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Good communication keeps a workplace running and keeps you safe. Most of it is simple: listen carefully, speak clearly, and ask when you are not sure.\n\nWhen a supervisor gives you a task, listen all the way through before responding. If something is unclear, ask a question. Asking \"Where do you want these stacked?\" is far better than guessing wrong. Questions are not a sign of weakness. They show you care about doing the job right.\n\nWhen you speak to coworkers and customers, use a calm, respectful tone. Say please and thank you. If you disagree, you can say so without raising your voice or putting the other person down.\n\nA few habits build trust fast:\n\n- Repeat back instructions to confirm you understood.\n- Tell your supervisor early if a problem comes up.\n- Keep texts and emails short, clear, and polite.\n- Avoid gossip and side conversations during work.\n\nListening is the other half of communication. Give people your full attention, do not interrupt, and make eye contact when it is appropriate. When you listen well and speak clearly, work goes smoother, mistakes go down, and people enjoy working with you."
+        },
+        {
+          "slug": "understanding-workplace-expectations",
+          "title": "Understanding Workplace Expectations",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Every workplace has rules, some written and some unwritten. Learning them early helps you fit in and avoid problems.\n\nWritten rules usually live in an employee handbook. These cover things like work hours, breaks, dress code, safety procedures, and how to request time off. Read your handbook and keep it handy. When in doubt, follow the written rule.\n\nUnwritten rules are the everyday customs of a workplace, such as how people greet each other, who cleans the break room, or how busy times are handled. Watch how experienced coworkers act and follow their lead.\n\nEmployers generally expect you to:\n\n- Come ready to work and stay productive.\n- Follow directions from supervisors.\n- Use equipment and supplies properly.\n- Respect coworkers, customers, and company property.\n- Keep personal business for breaks.\n\nProbation periods are common in the first 30 to 90 days. This is a time when both you and the employer see if the job is a good fit. Treat it as a chance to prove yourself. Ask for feedback, fix small issues quickly, and show that you are reliable. Meeting expectations during this period sets you up for long-term success."
+        }
+      ],
+      "quiz": {
+        "title": "Workplace Readiness Foundations Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "What is the best order for listing jobs on a resume?",
+            "options": ["Oldest job first", "Most recent job first", "Alphabetical by employer", "Longest job first"],
+            "correct_index": 1,
+            "explanation": "Listing your most recent job first lets employers quickly see your current skills and experience."
+          },
+          {
+            "prompt": "In the STAR interview method, what does the 'R' stand for?",
+            "options": ["Reason", "Reference", "Result", "Response"],
+            "correct_index": 2,
+            "explanation": "The 'R' stands for Result, where you share how the situation turned out."
+          },
+          {
+            "prompt": "What is a 'no-call, no-show'?",
+            "options": ["Calling out sick properly", "Missing work without calling to let anyone know", "Showing up early", "Working a double shift"],
+            "correct_index": 1,
+            "explanation": "A no-call, no-show is missing work without notice, and it is one of the fastest ways to lose a job."
+          },
+          {
+            "prompt": "When a supervisor gives you a task you do not fully understand, the best move is to:",
+            "options": ["Guess and hope it is right", "Ask a clear question to confirm", "Do nothing until someone checks on you", "Ask a coworker to do it instead"],
+            "correct_index": 1,
+            "explanation": "Asking a question shows you care about doing the job correctly and prevents costly mistakes."
+          },
+          {
+            "prompt": "Where can you usually find a workplace's written rules?",
+            "options": ["The break room fridge", "The employee handbook", "Social media", "The parking lot"],
+            "correct_index": 1,
+            "explanation": "The employee handbook contains written rules about hours, dress code, safety, and time-off procedures."
+          },
+          {
+            "prompt": "How early should you generally arrive for a job interview?",
+            "options": ["Exactly on time", "10 to 15 minutes early", "30 minutes early", "A few minutes late is fine"],
+            "correct_index": 1,
+            "explanation": "Arriving 10 to 15 minutes early shows you are reliable without crowding the interviewer's schedule."
+          },
+          {
+            "prompt": "What is the purpose of a probation period in a new job?",
+            "options": ["To punish new workers", "A trial time for you and the employer to see if the job fits", "A period with no pay", "A time when you cannot be fired"],
+            "correct_index": 1,
+            "explanation": "A probation period is a trial time, usually 30 to 90 days, for both sides to confirm the job is a good fit."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "financial-literacy-for-independence",
+      "track": "workforce_readiness",
+      "title": "Financial Literacy for Independence",
+      "description": "Learn to manage money with confidence: build a budget, use a bank account, understand credit, and read a paycheck and taxes.",
+      "tier": "tier_2",
+      "is_trade": false,
+      "icon": "PiggyBank",
+      "est_hours": 5,
+      "sequence": 2,
+      "lessons": [
+        {
+          "slug": "building-a-budget",
+          "title": "Building a Budget That Works",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "A budget is simply a plan for your money. It tells your money where to go instead of wondering where it went. You do not need to be good at math, just honest about what comes in and what goes out.\n\nStart by writing down your income, which is the money you actually take home after taxes. Then list your expenses. Split them into two groups:\n\n- **Needs:** rent, food, utilities, transportation, phone.\n- **Wants:** eating out, streaming, new clothes, extras.\n\nA common starting plan is the 50/30/20 rule: about 50 percent of your take-home pay for needs, 30 percent for wants, and 20 percent for savings and paying down debt. Adjust the numbers to fit your real life.\n\nThe goal is to spend less than you earn, even if it is just a little at first. When money is tight, cover needs first and trim wants. Track your spending for one month so you can see where your money truly goes. Many people are surprised by small daily purchases that add up.\n\nReview your budget every month and adjust as life changes. A budget is not a punishment. It is a tool that gives you control and reduces stress."
+        },
+        {
+          "slug": "banking-basics",
+          "title": "Banking Basics",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "A bank account keeps your money safe and makes it easier to manage. There are two main types you will use.\n\nA **checking account** is for everyday money. You use it to receive your paycheck through direct deposit, pay bills, and use a debit card. A **savings account** is for money you want to set aside and grow a little over time.\n\nTo open an account, you usually need a government-issued ID, your Social Security number, and a small deposit. If a traditional bank is hard to access, look into credit unions or banks that offer second-chance accounts, which are designed for people rebuilding their finances.\n\nWatch out for fees. Common ones include overdraft fees, which happen when you spend more than you have, and monthly maintenance fees. Ask about these before you sign up, and choose an account with low or no fees when you can.\n\nA few smart habits:\n\n- Use direct deposit so your pay arrives safely and on time.\n- Keep track of your balance so you do not overdraw.\n- Set up alerts on your phone for low balances.\n- Avoid check-cashing stores and payday lenders, which charge high fees.\n\nA bank account is a key step toward financial independence and building a stable record."
+        },
+        {
+          "slug": "understanding-credit",
+          "title": "Understanding Credit",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Credit is the ability to borrow money and pay it back later. Your credit history shows lenders how reliable you are. This history is summed up in a credit score, a number that usually ranges from 300 to 850. A higher score makes it easier and cheaper to rent an apartment, get a loan, or sometimes get a job.\n\nYour score is built mostly from a few things:\n\n- **Payment history:** Do you pay on time? This matters most.\n- **Amounts owed:** How much of your available credit are you using?\n- **Length of history:** How long have you had credit?\n\nIf you have little or no credit, you can build it. A secured credit card, where you put down a deposit, is a common starting point. Use it for a small purchase each month and pay the full balance on time. Over time, this builds a positive record.\n\nProtect your credit by paying every bill on time, keeping balances low, and avoiding high-interest debt like payday loans. You are entitled to a free credit report each year from each major bureau, so check it for errors.\n\nBuilding credit takes patience, but good habits today open doors tomorrow."
+        },
+        {
+          "slug": "paychecks-and-taxes",
+          "title": "Reading Your Paycheck and Taxes",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "When you start a job, your pay is not quite as simple as hours times wage. Understanding your paycheck helps you plan and avoid surprises.\n\nYour **gross pay** is the total you earned before anything is taken out. Your **net pay**, also called take-home pay, is what lands in your account after deductions. The difference is made up of:\n\n- **Federal and state income tax:** money sent to the government.\n- **Social Security and Medicare (FICA):** taxes that fund retirement and health programs.\n- **Other deductions:** health insurance or retirement savings, if you choose them.\n\nWhen you are hired, you fill out a W-4 form, which tells your employer how much tax to withhold. Each January your employer gives you a W-2 form that summarizes the past year's pay and taxes.\n\nOnce a year, usually by mid-April, you file a tax return. This compares what you paid to what you owed. If too much was withheld, you get a refund. If too little, you may owe money. Many people with lower incomes qualify for credits like the Earned Income Tax Credit, which can mean a larger refund.\n\nKeep your pay stubs and tax forms in a safe place. Free tax help is available through programs like VITA for people who qualify."
+        },
+        {
+          "slug": "saving-and-emergencies",
+          "title": "Saving and Handling Emergencies",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Life brings surprises, like a car repair or a missed shift. Savings turn an emergency into an inconvenience instead of a crisis.\n\nStart an emergency fund, even a small one. A first goal of $500 can cover many common surprises. Over time, aim to save enough to cover three months of basic expenses. The trick is to start small and stay steady. Saving $10 or $20 from each paycheck adds up faster than you think.\n\nMake saving automatic so you do not have to rely on willpower:\n\n- Set up a small automatic transfer to savings on payday.\n- Keep savings in a separate account so it is harder to spend.\n- Save part of any extra money, like a tax refund.\n\nWhen an emergency hits, use your savings first before turning to high-interest borrowing. Avoid payday loans and car-title loans, which can trap you in debt with very high fees.\n\nIf you fall short, look for community resources, payment plans, or assistance programs before borrowing at a high cost. Talking to a bill provider early often leads to a workable plan.\n\nBuilding savings is not about being rich. It is about giving yourself a cushion and peace of mind so one bad day does not undo your progress."
+        }
+      ],
+      "quiz": {
+        "title": "Financial Literacy for Independence Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "In the 50/30/20 budgeting rule, what does the 20 percent go toward?",
+            "options": ["Wants like eating out", "Needs like rent", "Savings and paying down debt", "Taxes"],
+            "correct_index": 2,
+            "explanation": "In the 50/30/20 rule, 20 percent is set aside for savings and paying down debt."
+          },
+          {
+            "prompt": "What is the difference between gross pay and net pay?",
+            "options": ["They are the same thing", "Gross pay is before deductions; net pay is what you take home", "Net pay is before taxes", "Gross pay is your tip money"],
+            "correct_index": 1,
+            "explanation": "Gross pay is your total earnings before deductions, while net pay is what you actually take home."
+          },
+          {
+            "prompt": "Which factor matters most in building a good credit score?",
+            "options": ["Paying bills on time", "Owning a car", "Having a high salary", "Closing all your accounts"],
+            "correct_index": 0,
+            "explanation": "Payment history, meaning paying on time, is the single biggest factor in your credit score."
+          },
+          {
+            "prompt": "What is an overdraft fee?",
+            "options": ["A reward for saving", "A charge when you spend more than you have in your account", "A monthly interest payment", "A fee for using direct deposit"],
+            "correct_index": 1,
+            "explanation": "An overdraft fee is charged when you spend more money than you have in your account."
+          },
+          {
+            "prompt": "Which form does your employer give you in January to summarize last year's pay and taxes?",
+            "options": ["W-4", "W-2", "1099-INT", "I-9"],
+            "correct_index": 1,
+            "explanation": "The W-2 form summarizes the past year's pay and taxes and is used to file your return."
+          },
+          {
+            "prompt": "What is a good first goal for an emergency fund?",
+            "options": ["$50,000", "Around $500 to start", "Exactly one year of pay", "You should never save in an emergency fund"],
+            "correct_index": 1,
+            "explanation": "Starting with around $500 can cover many common emergencies, and you build from there."
+          },
+          {
+            "prompt": "Why should you avoid payday loans when possible?",
+            "options": ["They build credit fast", "They charge very high fees and can trap you in debt", "They are illegal everywhere", "They require no repayment"],
+            "correct_index": 1,
+            "explanation": "Payday loans carry very high fees and interest that can trap borrowers in a cycle of debt."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "career-exploration-and-goal-setting",
+      "track": "workforce_readiness",
+      "title": "Career Exploration & Goal Setting",
+      "description": "Discover careers that fit your strengths and interests, then set clear, reachable goals to build a path forward.",
+      "tier": "tier_1",
+      "is_trade": false,
+      "icon": "Compass",
+      "est_hours": 4,
+      "sequence": 3,
+      "lessons": [
+        {
+          "slug": "knowing-your-strengths",
+          "title": "Knowing Your Strengths and Interests",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "Choosing a career starts with knowing yourself. Everyone has strengths, even if they have not been on a traditional job in a while.\n\nThink about three areas:\n\n- **Skills:** What are you good at? This could be working with your hands, fixing things, talking to people, staying organized, or solving problems.\n- **Interests:** What holds your attention? Some people enjoy being active and outdoors, others like steady, detailed work.\n- **Values:** What matters to you in a job? Maybe it is good pay, steady hours, working on a team, or having room to grow.\n\nYour life experience counts too. Skills you built in many settings, like staying calm under pressure, leading others, or managing your time, all transfer to the workplace. These are called transferable skills, and employers value them.\n\nA simple exercise: write down three things you do well, three things you enjoy, and three things you want from a job. Look for careers where these lists overlap.\n\nNo one is good at everything, and that is fine. The goal is to find work that uses your real strengths and fits the life you want to build. When a job matches who you are, you are more likely to stick with it and succeed."
+        },
+        {
+          "slug": "exploring-career-paths",
+          "title": "Exploring Career Paths",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "Once you know your strengths, it is time to explore what is out there. There are many more career paths than most people realize, and many do not require a four-year degree.\n\nSkilled trades like electrical work, plumbing, carpentry, and welding are in high demand and pay well. Many start with on-the-job training or an apprenticeship, where you earn while you learn. Other growing fields include warehouse and logistics, manufacturing, healthcare support, transportation, and food service management.\n\nWhen you look at a career, ask:\n\n- What does the daily work actually involve?\n- What training or certification do I need?\n- What does it pay to start, and can I move up?\n- Is this field hiring in my area?\n- Is this field open to people with my background?\n\nFree tools can help. Websites like CareerOneStop and the Bureau of Labor Statistics list pay, job outlook, and training for hundreds of careers. Talking to people who do the work, called informational interviews, gives you the real picture.\n\nSome fields are especially open to people rebuilding their careers. Focus your energy there. Exploring takes time, but knowing your options helps you choose a path with real opportunity rather than settling for the first thing that comes along."
+        },
+        {
+          "slug": "setting-smart-goals",
+          "title": "Setting SMART Goals",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "A goal without a plan is just a wish. SMART goals turn what you want into steps you can actually take. SMART stands for:\n\n- **Specific:** Say exactly what you want. \"Get a forklift certification\" beats \"get a better job.\"\n- **Measurable:** Make it something you can check off. You will know when it is done.\n- **Achievable:** Make sure it is realistic for your situation right now.\n- **Relevant:** Connect it to your bigger plan.\n- **Time-bound:** Give it a deadline, like \"within 60 days.\"\n\nFor example, instead of \"I want to work in the trades,\" a SMART goal is: \"I will complete the electrical fundamentals course and apply to three apprenticeships within 90 days.\"\n\nBig goals can feel overwhelming, so break them into smaller steps. Each small win builds momentum and confidence. Write your goals down and keep them where you will see them.\n\nLife will throw obstacles in the way. When that happens, do not quit, just adjust. Move the deadline if you need to, or break the step down further. Progress is rarely a straight line. What matters is that you keep moving forward, one realistic step at a time."
+        },
+        {
+          "slug": "building-your-network",
+          "title": "Building Your Network and Next Steps",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Many jobs are found through people, not just applications. Building a network means connecting with others who can share advice, leads, and support. You may have more of a network than you think.\n\nStart with people you already know: family, friends, former coworkers, case managers, mentors, and program staff. Let them know what kind of work you are looking for. People cannot help if they do not know what you need.\n\nThen widen your circle:\n\n- Attend job fairs and hiring events.\n- Connect with workforce centers and reentry programs.\n- Build a simple, professional online profile if you can.\n- Treat every program and class as a chance to meet helpful people.\n\nWhen you meet someone, be respectful, be clear about your goals, and follow up with a thank-you. Relationships are built over time, so stay in touch even when you are not job hunting.\n\nFinally, take action on what you have learned. Pick one career path that fits your strengths, set one SMART goal, and identify three people who might help. Write down your first three steps and a date to start each one. The plan only works if you work the plan. Small, steady action, supported by people who want to see you succeed, is how careers get built."
+        }
+      ],
+      "quiz": {
+        "title": "Career Exploration & Goal Setting Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "What are transferable skills?",
+            "options": ["Skills only useful in one job", "Skills built in many settings that carry over to the workplace", "Skills that require a college degree", "Skills you cannot put on a resume"],
+            "correct_index": 1,
+            "explanation": "Transferable skills, like staying calm under pressure or managing time, carry over from any setting to the workplace."
+          },
+          {
+            "prompt": "In a SMART goal, what does the 'T' stand for?",
+            "options": ["Tough", "Time-bound", "Temporary", "Theoretical"],
+            "correct_index": 1,
+            "explanation": "The 'T' stands for Time-bound, meaning the goal has a clear deadline."
+          },
+          {
+            "prompt": "Which of these is an example of earning while you learn?",
+            "options": ["A four-year college degree", "An apprenticeship", "An unpaid internship", "A correspondence course"],
+            "correct_index": 1,
+            "explanation": "An apprenticeship lets you earn a paycheck while learning a trade on the job."
+          },
+          {
+            "prompt": "What is an informational interview?",
+            "options": ["A job interview for a position", "A talk with someone who does the work to learn what it is really like", "A test of your job knowledge", "An online survey"],
+            "correct_index": 1,
+            "explanation": "An informational interview is a conversation with someone in a field to learn what the work is really like."
+          },
+          {
+            "prompt": "Which is the better example of a SMART goal?",
+            "options": ["I want a better job someday", "I will complete the electrical course and apply to three apprenticeships within 90 days", "I will get rich", "I might look into the trades"],
+            "correct_index": 1,
+            "explanation": "It is specific, measurable, achievable, relevant, and time-bound, which makes it a SMART goal."
+          },
+          {
+            "prompt": "What is the first step in building a network?",
+            "options": ["Only contact strangers online", "Start with people you already know", "Wait for someone to call you", "Avoid telling anyone you are job hunting"],
+            "correct_index": 1,
+            "explanation": "Starting with people you already know, who can share leads and advice, is the best first step."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "emotional-intelligence-workplace-resilience",
+      "track": "emotional_readiness",
+      "title": "Emotional Intelligence & Workplace Resilience",
+      "description": "Strengthen self-awareness, manage stress, and handle conflict at work with confidence and calm.",
+      "tier": "tier_1",
+      "is_trade": false,
+      "icon": "Brain",
+      "est_hours": 5,
+      "sequence": 4,
+      "lessons": [
+        {
+          "slug": "what-is-emotional-intelligence",
+          "title": "What Is Emotional Intelligence?",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "Emotional intelligence, often called EI, is the ability to notice, understand, and manage your own emotions, and to respond well to the emotions of others. It is a skill, which means it can be learned and improved with practice, just like any trade.\n\nEI has four main parts:\n\n- **Self-awareness:** noticing what you feel and why.\n- **Self-management:** handling your feelings so they do not control your actions.\n- **Social awareness:** reading the moods and needs of others.\n- **Relationship skills:** communicating and working well with people.\n\nWhy does this matter at work? Employers often say attitude and people skills matter as much as technical ability. A worker who stays calm under pressure, takes feedback without getting defensive, and gets along with the team is someone employers want to keep.\n\nEmotions are not good or bad, they are information. Anger might tell you a boundary was crossed. Stress might tell you that you have too much on your plate. The skill is not to ignore feelings but to understand them and choose how you respond.\n\nStrong emotional intelligence helps you stay steady when work gets hard, recover from setbacks, and build the kind of relationships that lead to a stable, successful career."
+        },
+        {
+          "slug": "building-self-awareness",
+          "title": "Building Self-Awareness",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "Self-awareness is the foundation of emotional intelligence. It means knowing what you are feeling in the moment and understanding what triggers those feelings. You cannot manage an emotion you do not notice.\n\nStart by naming your emotions. When something happens, pause and ask yourself, \"What am I feeling right now?\" Putting a name to it, like frustrated, worried, or proud, actually lowers its intensity and helps you think clearly.\n\nNext, notice your triggers. These are the situations that set off strong reactions. Maybe being criticized in front of others, feeling rushed, or being told no. When you know your triggers, you can prepare for them instead of being caught off guard.\n\nPay attention to your body too. Emotions show up physically: a tight chest, clenched jaw, or fast heartbeat are early warning signs that you are getting upset. Catching these signs early gives you time to respond instead of react.\n\nTry this simple practice at the end of each day:\n\n- What was a moment I felt a strong emotion?\n- What triggered it?\n- How did I respond, and how did it turn out?\n\nOver time, this builds a clear picture of your patterns. With that knowledge, you can make better choices and stay in control even when work gets stressful."
+        },
+        {
+          "slug": "managing-stress",
+          "title": "Managing Stress at Work",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Stress is your body's natural response to pressure. A little can sharpen your focus, but too much can wear you down and lead to mistakes or burnout. Learning to manage stress keeps you healthy and effective.\n\nThe first step is to recognize your stress signals early. These might be trouble sleeping, irritability, headaches, or feeling overwhelmed. When you notice them, treat it as a signal to take action.\n\nSimple tools that work in the moment:\n\n- **Breathe slowly.** Breathe in for four counts, hold for four, out for four. This calms your body fast.\n- **Take a short break.** Step away, stretch, or get water before returning.\n- **Focus on one task at a time.** Trying to do everything at once raises stress.\n\nLonger-term, manage stress by taking care of your basics: sleep, movement, and eating regularly all build your ability to handle pressure. Talking to someone you trust also helps lighten the load.\n\nAt work, you can lower stress by planning your day, asking for help when tasks pile up, and being honest with your supervisor when you are overloaded. Asking for help is a sign of strength, not weakness.\n\nYou will not avoid stress entirely, and that is normal. The goal is to keep it at a level you can handle so it does not control you."
+        },
+        {
+          "slug": "handling-conflict",
+          "title": "Handling Conflict at Work",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Conflict happens anywhere people work together. A disagreement is not a failure, it is normal. What matters is how you handle it. Done well, working through conflict can even strengthen a team.\n\nWhen tension rises, the first move is to stay calm. If you feel yourself getting heated, pause and take a breath before responding. It is okay to say, \"Let me think about that for a second.\" Reacting in anger almost always makes things worse.\n\nUse these steps to work through a conflict:\n\n- **Listen first.** Let the other person explain without interrupting. Try to understand their side.\n- **Speak for yourself.** Use \"I\" statements, like \"I felt frustrated when the order changed,\" instead of blaming with \"you always.\"\n- **Focus on the problem, not the person.** Attack the issue, not each other.\n- **Look for a solution.** Ask, \"How can we fix this so it works for both of us?\"\n\nSome conflicts you can solve directly. Others may need a supervisor's help, and that is fine. If a situation involves harassment, threats, or safety, report it through the proper channels right away.\n\nHandling conflict with respect shows maturity and builds trust. Coworkers and bosses notice the person who keeps their cool and works toward solutions. That reputation will serve you well throughout your career."
+        },
+        {
+          "slug": "ei-self-assessment",
+          "title": "Reflective Self-Assessment: How Do You Respond?",
+          "kind": "simulation",
+          "sequence": 5,
+          "content": "This is a reflective self-assessment, not a pass-or-fail test. In this interactive, you will read realistic workplace situations and choose how you would most likely respond. Each choice uses a frequency scale, like \"rarely\" to \"always,\" so be honest with yourself rather than picking the answer you think sounds best.\n\nYou will work through scenarios such as getting tough feedback from a supervisor, feeling overwhelmed during a busy shift, or disagreeing with a coworker. After each one, you will see a short reflection explaining the most emotionally healthy response and why it works. Notice your patterns. There is no shame in any answer. The point is to learn about yourself so you can keep growing.\n\nKeep a notebook nearby. As you go, jot down one situation where you would like to respond differently, and one small step you could take next time. Self-awareness grows every time you pause and reflect like this.\n\nRemember the skills from this course: name your emotions, breathe before reacting, listen first, and focus on the problem instead of the person. The accompanying quiz uses the same reflective style, and the marked answers point to the most emotionally healthy choice, but treat them as a mirror, not a judgment.",
+          "sim_type": "ei-stress-self-assessment",
+          "sim_inspiration": "https://www.mindtools.com/"
+        }
+      ],
+      "quiz": {
+        "title": "EI & Stress Self-Assessment (Reflective)",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "Reflective check: When a supervisor gives you critical feedback, how often do you take a breath and listen before responding?",
+            "options": ["Almost never", "Sometimes", "Often", "Almost always"],
+            "correct_index": 3,
+            "explanation": "Pausing to listen before reacting is the most emotionally healthy response, though this is a reflection, not a judgment of you."
+          },
+          {
+            "prompt": "Reflective check: When you feel a strong emotion building, how often do you pause to name what you are feeling?",
+            "options": ["Almost never", "Rarely", "Sometimes", "Often or always"],
+            "correct_index": 3,
+            "explanation": "Naming an emotion lowers its intensity and helps you think clearly, so doing it often is healthiest."
+          },
+          {
+            "prompt": "Reflective check: During a stressful, busy shift, how often do you use a calming tool like slow breathing or a short break?",
+            "options": ["Never, I just push through until I crash", "Rarely", "Sometimes", "Often, as part of how I cope"],
+            "correct_index": 3,
+            "explanation": "Using calming tools regularly keeps stress at a manageable level and prevents burnout."
+          },
+          {
+            "prompt": "Reflective check: In a disagreement with a coworker, how often do you use 'I' statements instead of blaming with 'you always'?",
+            "options": ["Almost never", "Rarely", "Sometimes", "Often or always"],
+            "correct_index": 3,
+            "explanation": "Using 'I' statements focuses on the problem rather than attacking the person, which is the healthiest approach."
+          },
+          {
+            "prompt": "Reflective check: When tasks pile up beyond what you can handle, how often do you ask for help?",
+            "options": ["Never, asking feels like weakness", "Rarely", "Sometimes", "Often, because asking for help is a strength"],
+            "correct_index": 3,
+            "explanation": "Asking for help when overloaded is a sign of strength and good self-management, not weakness."
+          },
+          {
+            "prompt": "Reflective check: When you notice early stress signals in your body, like a tight chest or clenched jaw, how often do you act on them?",
+            "options": ["I usually ignore them", "Rarely act", "Sometimes act", "Often act early to calm down"],
+            "correct_index": 3,
+            "explanation": "Acting on early physical stress signals gives you time to respond calmly instead of reacting."
+          },
+          {
+            "prompt": "Reflective check: If a workplace conflict involves a threat, harassment, or a safety issue, how often would you report it through the proper channels?",
+            "options": ["Never, I would handle it alone", "Only if pushed", "Maybe", "Always, right away"],
+            "correct_index": 3,
+            "explanation": "Serious issues like threats, harassment, or safety hazards should always be reported through proper channels right away."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "keyboarding-and-digital-basics",
+      "track": "digital",
+      "title": "Keyboarding & Digital Basics",
+      "description": "Build essential computer skills: touch typing, using email, and completing online job applications with confidence.",
+      "tier": "tier_1",
+      "is_trade": false,
+      "icon": "Keyboard",
+      "est_hours": 5,
+      "sequence": 5,
+      "lessons": [
+        {
+          "slug": "computer-and-keyboard-basics",
+          "title": "Computer and Keyboard Basics",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "Computers are part of almost every job today, from clocking in to filling out forms. The good news is that the basics are easy to learn, and you only need a few core skills to get started.\n\nThe keyboard is your main tool for entering text. It has letter keys, number keys, and special keys. A few important ones:\n\n- **Enter:** starts a new line or confirms a choice.\n- **Shift:** makes capital letters and symbols.\n- **Backspace:** deletes the character before the cursor.\n- **Spacebar:** adds a space between words.\n- **Tab:** moves to the next field on a form.\n\nThe mouse or touchpad moves the pointer on screen. A single left click selects something, a double click opens it, and a right click shows more options.\n\nYou will also work with windows, which are the boxes that hold programs. You can open, close, and switch between them. Files are saved documents, and folders hold groups of files, much like a paper filing cabinet.\n\nDo not worry about memorizing everything at once. Like any skill, comfort comes with practice. The more you use a computer, the more natural it becomes. Take your time, explore, and remember that you cannot easily break anything just by clicking around and learning."
+        },
+        {
+          "slug": "touch-typing-practice",
+          "title": "Touch Typing Practice",
+          "kind": "simulation",
+          "sequence": 2,
+          "content": "In this typing simulation, you will practice touch typing, which means typing without looking at the keys. This skill saves time and makes computer work much easier. Like learning a tool on the job, it feels slow at first and then becomes automatic.\n\nThe foundation is the home row. Place your left fingers on A, S, D, and F, and your right fingers on J, K, L, and the semicolon. Most keyboards have small bumps on the F and J keys so you can find this position without looking. Your thumbs rest on the spacebar.\n\nFrom the home row, your fingers reach up and down to other keys and return home. The simulation will guide you through letters, then words, then short sentences. It tracks two things:\n\n- **Speed,** measured in words per minute (WPM).\n- **Accuracy,** the percentage of keys you hit correctly.\n\nStart slow and focus on accuracy first. Speed naturally follows as your fingers learn the positions. Try to keep your eyes on the screen, not your hands, even when it feels hard. A few short sessions each day work better than one long one. Most people reach a comfortable working speed of 30 to 40 WPM with regular practice. Be patient with yourself and celebrate small gains.",
+          "sim_type": "touch-typing-trainer",
+          "sim_inspiration": "https://www.keybr.com/"
+        },
+        {
+          "slug": "using-email",
+          "title": "Using Email",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Email is the main way most workplaces communicate. Knowing how to send a clear, professional email is a skill employers expect.\n\nFirst, set up a professional email address. Use a version of your real name, like firstname.lastname, rather than a nickname. Free services like Gmail work well and are widely accepted.\n\nEvery email has a few key parts:\n\n- **To:** the address of the person you are writing.\n- **Subject:** a short summary of what the email is about.\n- **Body:** your message.\n\nWrite a clear subject line so the reader knows what to expect, like \"Application for Warehouse Position.\" In the body, start with a greeting such as \"Dear Mr. Lee\" or \"Hello,\" then get to your point. Keep it short and polite, and end with a closing like \"Thank you\" and your name.\n\nA few professional habits:\n\n- Use proper spelling and capitalization, not text-message style.\n- Reread your email before sending it.\n- Reply to work emails within a day when you can.\n- Be careful what you write, since email is a permanent record.\n\nCheck your email regularly, especially during a job search, because employers often reach out this way. Watch out for spam and scam emails that ask for money or personal information, and never share passwords by email. With a little practice, email becomes a fast and reliable tool."
+        },
+        {
+          "slug": "online-job-applications",
+          "title": "Completing Online Job Applications",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Most jobs today require an online application. Knowing how to fill one out carefully gives you an edge over applicants who rush and make mistakes.\n\nBefore you start, gather your information in one place so you are not hunting for it mid-application:\n\n- Your work history with dates, job titles, and employers.\n- Your education and any certifications.\n- Contact information for references.\n- A digital copy of your resume.\n\nMany applications are on company websites or job boards like Indeed. You usually create an account first, then fill in fields step by step. Use the Tab key to move between fields, and read each question carefully. Fields marked with a star are required.\n\nTake your time and be accurate. Double-check spelling, dates, and your contact information, since a wrong phone number means an employer cannot reach you. If you can upload your resume, do it, and still fill in the fields completely.\n\nSome applications include short questions or a skills assessment. Answer honestly and thoughtfully. Before you submit, review everything one last time, because most applications cannot be changed after sending.\n\nAfter applying, save the job title and company so you can follow up. Applying online can feel impersonal, but a careful, complete application shows employers you pay attention to detail, which is exactly the kind of worker they want to hire."
+        },
+        {
+          "slug": "online-safety-basics",
+          "title": "Staying Safe Online",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "As you use computers for work and job searching, it is important to protect your information and stay safe online. A few simple habits go a long way.\n\nStart with strong passwords. A good password is long and hard to guess. Use a mix of letters, numbers, and symbols, and avoid using the same password everywhere. Never share your passwords with anyone, and never send them by email.\n\nBe alert for scams. Be suspicious of any message that:\n\n- Asks for money or personal information out of the blue.\n- Promises a job that seems too good to be true.\n- Pressures you to act immediately.\n- Asks you to pay a fee to get hired.\n\nReal employers do not ask you to pay them to get a job, and they do not need your bank password or Social Security number before hiring you. When something feels off, slow down and verify it through a trusted source.\n\nWhen using public or shared computers, like at a library, always log out of your accounts when you finish, and never save passwords on a machine that is not yours.\n\nFinally, think before you post on social media. Employers sometimes look at public profiles. Keep your online presence respectful and professional. Protecting your information protects your future, so make these habits part of how you work online."
+        }
+      ],
+      "quiz": {
+        "title": "Keyboarding & Digital Basics Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "Which keys are the 'home row' position for your left hand?",
+            "options": ["Q, W, E, R", "A, S, D, F", "Z, X, C, V", "1, 2, 3, 4"],
+            "correct_index": 1,
+            "explanation": "The left-hand home row keys are A, S, D, and F, with the F key marked by a small bump."
+          },
+          {
+            "prompt": "When learning to type, what should you focus on first?",
+            "options": ["Speed above all", "Accuracy", "Typing without the spacebar", "Memorizing every symbol"],
+            "correct_index": 1,
+            "explanation": "Focusing on accuracy first builds good habits, and speed naturally follows with practice."
+          },
+          {
+            "prompt": "What makes a good professional email address?",
+            "options": ["A funny nickname", "A version of your real name", "Random numbers only", "Your home address"],
+            "correct_index": 1,
+            "explanation": "A professional email uses a version of your real name, which looks credible to employers."
+          },
+          {
+            "prompt": "On an online application, what do fields marked with a star usually mean?",
+            "options": ["They are optional", "They are required", "They are for managers only", "They are bonus questions"],
+            "correct_index": 1,
+            "explanation": "A star marks a required field that you must fill in to submit the application."
+          },
+          {
+            "prompt": "Which of these is a sign of a job scam?",
+            "options": ["A clear job description", "Being asked to pay a fee to get hired", "An interview invitation", "A request for your resume"],
+            "correct_index": 1,
+            "explanation": "Real employers never ask you to pay a fee to get a job, so this is a clear scam warning sign."
+          },
+          {
+            "prompt": "What should you always do after using a shared or public computer?",
+            "options": ["Leave your accounts open for the next person", "Log out of your accounts", "Save your passwords on it", "Turn off the monitor only"],
+            "correct_index": 1,
+            "explanation": "Logging out of your accounts protects your personal information on shared computers."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "electrical-trade-fundamentals",
+      "track": "trades",
+      "title": "Electrical Trade Fundamentals",
+      "description": "Learn the basics of residential electrical work: wire identification, circuit panels, breaker installation, voltage, safety, and troubleshooting.",
+      "tier": "tier_1",
+      "is_trade": true,
+      "icon": "Zap",
+      "est_hours": 7,
+      "sequence": 6,
+      "lessons": [
+        {
+          "slug": "electrical-safety-first",
+          "title": "Electrical Safety First",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "Before learning any electrical skill, you must learn safety. Electricity can seriously injure or kill, so respect for safe practice is what separates a good electrician from a dangerous one.\n\nThe most important rule is to de-energize before you work. This means turning off the power at the breaker and confirming it is off before touching any wires. Never trust a switch alone. Use a voltage tester to verify that the circuit is truly dead. Professionals follow lockout/tagout procedures, which lock the breaker off and tag it so no one turns it back on while you work.\n\nKey safety practices include:\n\n- Treat every wire as if it is live until you prove otherwise.\n- Keep one hand in your pocket when testing live circuits to avoid current crossing your chest.\n- Wear insulated gloves and safety glasses.\n- Use tools with insulated handles.\n- Keep your work area dry, since water conducts electricity.\n- Never work on energized circuits unless properly trained and equipped.\n\nElectric shock happens when current passes through your body. Even a small amount across the heart can be deadly. Burns and falls caused by a shock are also serious risks on the job.\n\nSafety is not about fear, it is about habit. The pros who work for decades without injury do so because they follow the same careful steps every single time. Build those habits now, and they will protect you for your whole career."
+        },
+        {
+          "slug": "wire-color-identification",
+          "title": "Wire Identification by Color",
+          "kind": "simulation",
+          "sequence": 2,
+          "content": "In this simulation, you will practice identifying electrical wires by their color, a core skill you will use every day in the trade. You will see wires of different colors and match each to its correct role in a standard US residential system.\n\nHere is what the common colors mean under typical US wiring practice:\n\n- **Black:** a hot (live) wire that carries current. Often the main hot.\n- **Red:** a second hot wire, used for 240-volt circuits and switch legs.\n- **White or gray:** the neutral wire, which returns current to the panel.\n- **Green or bare copper:** the ground wire, a safety path for stray current.\n\nThe National Electrical Code requires set colors only for two roles: ground must be green, green with a yellow stripe, or bare copper, and neutral must be white or gray. Hot wire colors like black and red are strong industry conventions but not strict code, so always verify with a voltage tester before working.\n\nIn the simulation, you will drag each wire to its correct label and get instant feedback. Wrong matches will explain the correct answer so you learn as you go. Speed matters less than getting it right, because mixing up a hot and a neutral can be dangerous. Practice until you can identify each color confidently and remember the golden rule: test before you trust.",
+          "sim_type": "wire-color-identification",
+          "sim_inspiration": "https://www.lunchboxsessions.com/"
+        },
+        {
+          "slug": "circuit-and-panel-basics",
+          "title": "Circuit and Fuse Panel Basics",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "The electrical panel, sometimes called the breaker box or load center, is the heart of a building's electrical system. Power from the utility comes in here and is divided into circuits that feed different parts of the building.\n\nA circuit is a complete loop that carries electricity from the panel, through the wires, to outlets and devices, and back. Each circuit is protected by either a circuit breaker or, in older homes, a fuse. These protective devices stop the flow of electricity if too much current tries to pass through, which prevents overheating and fire.\n\nKey parts of a panel:\n\n- **Main breaker:** shuts off power to the whole panel.\n- **Branch breakers:** each controls one circuit.\n- **Bus bars:** metal strips that distribute power to the breakers.\n- **Neutral and ground bars:** where neutral and ground wires connect.\n\nIn a standard US home, the panel supplies both 120-volt circuits, used for lights and regular outlets, and 240-volt circuits, used for large appliances like electric ranges, dryers, and air conditioners. A 240-volt circuit uses a double-pole breaker that connects to two hot wires.\n\nWhen a breaker trips, it usually means the circuit was overloaded or there was a fault. Understanding how the panel organizes and protects circuits is the foundation for safely installing, troubleshooting, and repairing electrical systems."
+        },
+        {
+          "slug": "installing-a-breaker",
+          "title": "Breaker Installation Basics",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Installing a circuit breaker is a common task, but it must be done with great care because the panel can carry deadly voltage even when the main breaker is off. This lesson covers the basic steps. Always follow local code and work under qualified supervision when learning.\n\nFirst, choose the right breaker. It must match the panel brand and type, and its amperage must match the wire size of the circuit. For example, 15-amp breakers pair with 14-gauge wire and 20-amp breakers pair with 12-gauge wire. Using a breaker that is too large for the wire is a fire hazard.\n\nThe general process is:\n\n- Turn off the main breaker and verify power is off where you will work.\n- Remove the panel cover carefully.\n- Connect the circuit's hot wire to the new breaker's terminal and tighten firmly.\n- Connect the neutral wire to the neutral bar and the ground wire to the ground bar.\n- Snap the breaker into an open slot on the bus bar.\n- Replace the cover, then turn the breaker and main back on.\n\nRemember that even with the main breaker off, the wires feeding into the main are still live. That area is extremely dangerous. Many electricians consider panel work an advanced task for trained professionals. Learn the fundamentals here, then build skill safely with hands-on training and proper supervision."
+        },
+        {
+          "slug": "voltage-and-troubleshooting",
+          "title": "Voltage and Troubleshooting",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Troubleshooting is the skill of finding out why something is not working. A good electrician thinks like a detective, checking one thing at a time until the problem is found.\n\nFirst, understand the basics. Voltage is the electrical pressure that pushes current through a wire, measured in volts. Current is the flow of electricity, measured in amps. Resistance, measured in ohms, slows the flow. These three are related: more voltage pushes more current, and more resistance reduces it.\n\nYour main tool is the multimeter, which measures voltage, current, and resistance. To find a problem, you compare what you measure to what you expect. For example, if an outlet reads 0 volts when it should read about 120 volts, the circuit is broken somewhere upstream.\n\nCommon problems and clues:\n\n- **Dead outlet:** check the breaker, then test for voltage along the circuit.\n- **Breaker trips repeatedly:** likely an overload or a short circuit.\n- **Flickering lights:** often a loose connection.\n- **Warm outlet or burning smell:** stop and investigate immediately, as this is a fire risk.\n\nAlways work safely. Turn off power before opening boxes, and only test live circuits when you must and are trained to do so. Work step by step, from the panel outward, and keep notes. Methodical troubleshooting saves time and keeps you safe."
+        }
+      ],
+      "quiz": {
+        "title": "Electrical Trade Fundamentals Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "In standard US residential wiring, what color is the ground wire?",
+            "options": ["Black", "White", "Green or bare copper", "Red"],
+            "correct_index": 2,
+            "explanation": "The NEC requires the ground (equipment grounding conductor) to be green, green with a yellow stripe, or bare copper."
+          },
+          {
+            "prompt": "What color is the neutral wire in standard US wiring?",
+            "options": ["White or gray", "Black", "Red", "Green"],
+            "correct_index": 0,
+            "explanation": "The NEC designates white or gray as the neutral (grounded) conductor."
+          },
+          {
+            "prompt": "What is the standard voltage of a regular household outlet in the US?",
+            "options": ["12 volts", "120 volts", "240 volts", "480 volts"],
+            "correct_index": 1,
+            "explanation": "Standard US household outlets operate at about 120 volts; 240-volt circuits power large appliances."
+          },
+          {
+            "prompt": "Before working on a circuit, the most important safety step is to:",
+            "options": ["Wear gloves only", "De-energize the circuit and verify it is off with a tester", "Work quickly", "Flip the light switch"],
+            "correct_index": 1,
+            "explanation": "Always de-energize at the breaker and confirm the circuit is dead with a voltage tester before working."
+          },
+          {
+            "prompt": "Which breaker and wire pairing is correct?",
+            "options": ["15-amp breaker with 14-gauge wire", "20-amp breaker with 18-gauge wire", "30-amp breaker with 14-gauge wire", "40-amp breaker with 16-gauge wire"],
+            "correct_index": 0,
+            "explanation": "A 15-amp breaker pairs with 14-gauge wire; using a breaker too large for the wire is a fire hazard."
+          },
+          {
+            "prompt": "A circuit breaker's main job is to:",
+            "options": ["Increase voltage", "Stop the flow of electricity when current gets too high", "Store electricity", "Change AC to DC"],
+            "correct_index": 1,
+            "explanation": "A breaker trips to stop current flow during an overload or fault, preventing overheating and fire."
+          },
+          {
+            "prompt": "Which tool measures voltage, current, and resistance for troubleshooting?",
+            "options": ["A hammer", "A multimeter", "A stud finder", "A torque wrench"],
+            "correct_index": 1,
+            "explanation": "A multimeter measures voltage, current, and resistance, making it the key troubleshooting tool."
+          },
+          {
+            "prompt": "A 240-volt circuit for a large appliance typically uses what kind of breaker?",
+            "options": ["A single-pole breaker", "A double-pole breaker connected to two hot wires", "No breaker at all", "A fuse only"],
+            "correct_index": 1,
+            "explanation": "240-volt circuits use a double-pole breaker that connects to two hot wires."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plumbing-trade-fundamentals",
+      "track": "trades",
+      "title": "Plumbing Trade Fundamentals",
+      "description": "Get started in plumbing: identify pipe types, match fittings and connectors, route water lines, diagnose leaks, and choose the right tools.",
+      "tier": "tier_1",
+      "is_trade": true,
+      "icon": "Wrench",
+      "est_hours": 7,
+      "sequence": 7,
+      "lessons": [
+        {
+          "slug": "plumbing-systems-overview",
+          "title": "How Plumbing Systems Work",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "A building's plumbing has two main jobs: bring clean water in and carry waste water out. Understanding these two systems is the foundation of all plumbing work.\n\nThe **supply system** delivers fresh water under pressure. Cold water comes straight from the main, while some of it passes through a water heater to become hot water. These pressurized lines run to every sink, toilet, tub, and appliance. Because they are under pressure, supply lines are usually smaller and made of materials that can hold pressure, like copper, PEX, or CPVC.\n\nThe **drain-waste-vent (DWV) system** carries used water and waste away. Unlike supply lines, drains rely on gravity, not pressure, so the pipes are larger and sloped downward. The vent part of the system lets air in so water flows smoothly and keeps sewer gases out of the building.\n\nA key safety device in every drain is the trap, the curved pipe under a sink. It holds a little water that blocks sewer gas from coming back up while still letting waste flow down.\n\nKey points to remember:\n\n- Supply lines are pressurized and use copper, PEX, or CPVC.\n- Drain lines use gravity and are usually PVC or cast iron.\n- Vents and traps keep the system healthy and safe.\n\nWhen you understand the path water takes, both in and out, every repair and installation makes more sense."
+        },
+        {
+          "slug": "pipe-identification",
+          "title": "Pipe Identification",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "Knowing your pipe types is essential, because each material has specific uses, joining methods, and tools. Here are the most common pipes you will meet in modern plumbing.\n\n- **PEX (cross-linked polyethylene):** flexible plastic tubing, often red, blue, or white. Used for hot and cold water supply. It bends around corners and joins with crimp or push-fit fittings, making it fast to install.\n- **Copper:** metallic, reddish-brown rigid pipe. Long-lasting and handles heat well, used for supply lines. It is joined by soldering, also called sweating, or with press fittings.\n- **PVC (polyvinyl chloride):** rigid white or dark gray plastic. Used for drain, waste, and vent lines and cold-water irrigation, not for hot water supply. Joined with solvent cement.\n- **CPVC:** off-white, cream, or tan plastic that handles heat better than PVC. Used for hot and cold water supply, joined with solvent cement made for CPVC.\n\nThe surest way to identify a pipe is to read the printing on its side, which lists the material and standard. PVC for pressure references ASTM D1785, while CPVC references ASTM D2846.\n\nA simple rule: pressurized water supply uses copper, PEX, or CPVC, while gravity drainage uses PVC or cast iron. Matching the right pipe to the right job, and never using PVC for hot pressurized water, keeps a system safe and code-compliant."
+        },
+        {
+          "slug": "fitting-and-connector-match",
+          "title": "Matching Fittings and Connectors",
+          "kind": "simulation",
+          "sequence": 3,
+          "content": "In this simulation, you will practice matching pipes to their correct fittings and connectors. Choosing the right fitting is one of the most important plumbing skills, because the wrong connector causes leaks and failed inspections.\n\nFittings change the direction or connection of pipe. Common types include:\n\n- **Coupling:** joins two straight pieces of pipe.\n- **Elbow:** turns the pipe, usually 90 or 45 degrees.\n- **Tee:** splits one line into two, forming a T shape.\n- **Reducer:** connects pipes of different sizes.\n- **Cap:** closes off the end of a pipe.\n\nEach pipe material has its own joining method, and the fitting must match both the pipe size and material:\n\n- PEX uses crimp rings or push-fit (also called push-to-connect) fittings.\n- Copper uses soldered or press fittings.\n- PVC and CPVC use solvent-cement fittings, with the correct cement for each.\n\nIn the simulation, you will be shown a pipe and a job, such as turning a corner or joining two sizes, and you will choose the correct fitting and connection method. You will get instant feedback explaining each choice. Pay attention to both the shape needed and the material match. Practice until selecting the right fitting feels automatic, because in the field, the right connection the first time saves hours of rework.",
+          "sim_type": "pipe-fitting-match",
+          "sim_inspiration": "https://phet.colorado.edu/"
+        },
+        {
+          "slug": "routing-water-lines",
+          "title": "Routing Water Lines",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Routing means planning and running pipe from its source to where the water is needed. Good routing makes a system reliable, efficient, and easy to service.\n\nWhen planning a route, aim for the shortest practical path with as few turns as possible. Every elbow adds resistance and a possible leak point, so straight runs are best where you can use them. Keep these principles in mind:\n\n- **Support the pipe.** Use straps or hangers at regular intervals so pipe does not sag. Sagging strains joints and, in drains, traps water.\n- **Slope the drains.** Drain lines must slope downward, commonly about a quarter inch per foot, so gravity carries waste away.\n- **Protect from freezing.** Keep supply lines away from cold exterior walls or insulate them, since frozen pipes can burst.\n- **Plan for access.** Place shutoff valves where they can be reached, and avoid burying joints inside walls when you can route around them.\n\nFor supply lines, flexible PEX is popular because it bends around obstacles and needs fewer fittings. Rigid pipe like copper or CPVC requires fittings at each turn.\n\nAlways check local plumbing codes before routing, since they set rules for materials, slope, support spacing, and where shutoffs go. Thinking through the route before you cut a single pipe saves material, prevents leaks, and makes future repairs far easier."
+        },
+        {
+          "slug": "leak-diagnosis-and-tools",
+          "title": "Leak Diagnosis and Tool Selection",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Finding and fixing leaks is bread-and-butter plumbing work. The key is to locate the true source, because water often travels before it shows up.\n\nStart by looking for the obvious: dripping joints, wet spots, stains, or mold. Water stains on a ceiling may appear far from the actual leak, since water runs along beams before dropping. Trace it back to the highest wet point. For hidden leaks, watch the water meter with all fixtures off. If it keeps moving, water is escaping somewhere.\n\nCommon leak sources and fixes:\n\n- **Loose connection:** tighten the fitting, but do not overtighten.\n- **Worn washer or O-ring in a faucet:** replace the part.\n- **Failed pipe joint:** cut out and replace the section.\n- **Corroded pipe:** replace the damaged run.\n\nUsing the right tool makes every job easier and safer. Core plumbing tools include:\n\n- **Pipe wrench:** grips and turns threaded metal pipe.\n- **Adjustable wrench:** for nuts and fittings.\n- **Channel-lock pliers:** for gripping various sizes.\n- **Tubing cutter:** makes clean, square cuts in copper or plastic.\n- **Basin wrench:** reaches nuts in tight spots under sinks.\n- **Plumber's tape (PTFE):** seals threaded joints.\n\nMatching the tool to the task protects the fitting and your hands. A careful, methodical approach, find the source first, then choose the right tool and part, is what makes leak repairs go smoothly."
+        }
+      ],
+      "quiz": {
+        "title": "Plumbing Trade Fundamentals Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "Which pipe material is used for drain, waste, and vent lines, not hot water supply?",
+            "options": ["PEX", "Copper", "PVC", "CPVC"],
+            "correct_index": 2,
+            "explanation": "PVC is rigid plastic used for drain-waste-vent and cold-water lines, not hot pressurized supply."
+          },
+          {
+            "prompt": "What does a drain system rely on to carry waste away?",
+            "options": ["Water pressure", "Gravity and a downward slope", "An electric pump in every drain", "Air pressure"],
+            "correct_index": 1,
+            "explanation": "Drain-waste-vent systems use gravity, so the pipes are larger and sloped downward."
+          },
+          {
+            "prompt": "Which pipe is flexible, often red or blue, and used for hot and cold water supply?",
+            "options": ["PVC", "Cast iron", "PEX", "Galvanized steel"],
+            "correct_index": 2,
+            "explanation": "PEX is flexible plastic tubing, often color-coded red and blue, used for hot and cold supply."
+          },
+          {
+            "prompt": "Which fitting is used to split one pipe line into two?",
+            "options": ["Coupling", "Cap", "Tee", "Reducer"],
+            "correct_index": 2,
+            "explanation": "A tee splits one line into two, forming a T shape."
+          },
+          {
+            "prompt": "What is the purpose of the trap (the curved pipe under a sink)?",
+            "options": ["To increase water pressure", "To hold water that blocks sewer gas from coming back up", "To filter drinking water", "To heat the water"],
+            "correct_index": 1,
+            "explanation": "The trap holds a small amount of water that blocks sewer gas while letting waste drain."
+          },
+          {
+            "prompt": "How are copper pipes commonly joined?",
+            "options": ["Solvent cement", "Soldering (sweating) or press fittings", "Duct tape", "Crimp rings only"],
+            "correct_index": 1,
+            "explanation": "Copper is joined by soldering, also called sweating, or with press fittings."
+          },
+          {
+            "prompt": "If you suspect a hidden leak, a good way to confirm it is to:",
+            "options": ["Turn on every faucet", "Watch the water meter with all fixtures off to see if it moves", "Paint the walls", "Add more water pressure"],
+            "correct_index": 1,
+            "explanation": "If the water meter keeps moving with all fixtures off, water is escaping somewhere in the system."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "carpentry-trade-fundamentals",
+      "track": "trades",
+      "title": "Carpentry Trade Fundamentals",
+      "description": "Master the core math and skills of carpentry: reading a tape measure, working with fractions and angles, estimating materials, and framing layout.",
+      "tier": "tier_1",
+      "is_trade": true,
+      "icon": "Hammer",
+      "est_hours": 7,
+      "sequence": 8,
+      "lessons": [
+        {
+          "slug": "carpentry-tools-and-safety",
+          "title": "Carpentry Tools and Safety",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "Carpentry is the trade of cutting, shaping, and joining wood to build structures and finishes. Before building anything, you need to know your tools and how to use them safely.\n\nCommon hand tools include the hammer, tape measure, speed square (for marking square and angled cuts), chalk line (for snapping straight lines over long distances), level, and chisel. Power tools speed up the work: the circular saw for straight cuts, the miter saw for angled cuts, the drill/driver for fasteners, and the nail gun for fast framing.\n\nSafety is essential because these tools are powerful and sharp. Follow these rules every time:\n\n- Wear safety glasses to protect against flying chips.\n- Wear hearing protection around loud power tools.\n- Keep blades sharp, since a dull blade is more dangerous than a sharp one.\n- Keep your hands clear of the cut line and never reach over a moving blade.\n- Unplug or remove the battery before changing a blade or bit.\n- Keep your work area clean to prevent trips and slips.\n\nLearn each tool one at a time, starting slow until the motion feels natural. Measure carefully before every cut, following the old carpenter's rule: measure twice, cut once. Good habits with tools and safety from day one will make you faster, more accurate, and far less likely to get hurt as you build your skills."
+        },
+        {
+          "slug": "reading-a-tape-measure",
+          "title": "Reading a Tape Measure",
+          "kind": "simulation",
+          "sequence": 2,
+          "content": "In this simulation, you will practice reading a tape measure, the single most-used skill in carpentry. You will see the tape stopped at different points and type or select the correct measurement, getting instant feedback.\n\nA standard tape measure breaks each inch into smaller marks. The longest line is the inch mark with its number. Within each inch, the marks get shorter as they get smaller:\n\n- The longest mark inside the inch is the **1/2 inch**.\n- The next size down is the **1/4 inch** (1/4 and 3/4).\n- Smaller still is the **1/8 inch**.\n- The smallest marks are the **1/16 inch**.\n\nThere are 16 of the smallest spaces in every inch. To read a measurement, find the last whole inch, then count the small marks past it. For example, three sixteenth-marks past the 5-inch line reads as 5 and 3/16 inches.\n\nRemember to simplify fractions when you can. Two sixteenths equal one eighth, four sixteenths equal one quarter, and eight sixteenths equal one half.\n\nA helpful tip: many tapes mark every foot and have special diamond or black marks at 16 inches for stud spacing. In the simulation, start with whole and half inches, then work down to sixteenths. Accuracy here prevents costly cutting mistakes, so take your time and read carefully until it becomes second nature.",
+          "sim_type": "tape-measure-reading",
+          "sim_inspiration": "https://www.blocklayer.com/tape-measure"
+        },
+        {
+          "slug": "fractions-and-angles",
+          "title": "Fractions and Angles",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Carpentry runs on math, but it is practical math you can learn step by step. The two areas you will use constantly are fractions and angles.\n\nFractions come from the tape measure. To work with them, you often need to add, subtract, or convert. The trick is to use a common denominator. To add 3/8 and 1/4, convert 1/4 into 2/8, then add to get 5/8. Always simplify your answer to the smallest terms. With practice, common conversions become automatic.\n\nWhen cutting a board to fit between two points, you may need to subtract. For example, an opening of 24 and 1/2 inches minus a 3/4-inch trim piece on each side leaves 23 inches for the middle piece. Careful fraction math prevents gaps and waste.\n\nAngles matter whenever pieces meet at a corner. Key angles to know:\n\n- **90 degrees:** a square corner, the most common.\n- **45 degrees:** half of 90, used for miter joints where two pieces form a corner.\n\nWhen two 45-degree cuts meet, they form a clean 90-degree corner, like the frame around a picture or door. The speed square is your go-to tool for marking these angles quickly.\n\nDo not be intimidated by the math. Most of it is adding and subtracting fractions and working with a few standard angles. The more you measure and cut, the more this math becomes a natural part of how you work."
+        },
+        {
+          "slug": "material-estimation",
+          "title": "Material Estimation",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Estimating materials means figuring out how much lumber and supplies a job needs before you buy. Good estimating saves money, prevents extra trips to the store, and reduces waste.\n\nStart by understanding common lumber. A board is named by its nominal size, like a 2x4, but the actual size is slightly smaller after milling, about 1.5 by 3.5 inches. Lumber comes in standard lengths such as 8, 10, 12, and 16 feet. Knowing this helps you choose lengths that cut with little waste.\n\nFor framing a wall, a common method is:\n\n- Measure the wall length in feet.\n- Studs are usually spaced 16 inches on center, so divide the length in inches by 16 and add one for the end, then add extra for corners and openings.\n- Add top and bottom plates, which run the full length of the wall.\n\nFor sheet goods like plywood or drywall, calculate the total area in square feet, then divide by the area of one sheet. A standard 4x8 sheet covers 32 square feet.\n\nAlways add a waste factor, usually about 10 percent, to cover cutting mistakes, bad boards, and offcuts. It is better to have a little extra than to run short in the middle of a job.\n\nWrite your estimate as a clear materials list with quantities and sizes. A careful estimate shows professionalism and keeps a job on budget and on schedule."
+        },
+        {
+          "slug": "framing-layout-basics",
+          "title": "Framing Layout Basics",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Framing is building the skeleton of a structure, usually with wood studs, plates, and headers. A wall frame supports the building and gives surfaces to attach drywall, siding, and finishes. Getting the layout right is what makes everything else line up.\n\nA basic wood-framed wall has these parts:\n\n- **Bottom plate (sole plate):** the horizontal board at the floor.\n- **Top plate:** the horizontal board at the top, often doubled.\n- **Studs:** the vertical boards between the plates.\n- **Header:** a strong beam over a door or window opening.\n- **King and jack studs:** support the header at openings.\n\nThe most important layout rule is stud spacing. In most walls, studs are placed 16 inches on center, meaning the center of each stud is 16 inches from the center of the next. This standard spacing lets standard 4-foot-wide sheets of drywall and plywood land on a stud at their edges. Some walls use 24-inch on-center spacing where code allows.\n\nTo lay out a wall, mark the stud locations on both plates at the same time, so every stud stands straight and true. Use a tape measure and speed square, and snap chalk lines to keep rows straight.\n\nAccurate layout makes the rest of the build faster and stronger. When studs are evenly spaced and plates are straight, doors hang true, drywall fits, and the whole structure stands solid. Take your time on layout, because mistakes here multiply down the line."
+        }
+      ],
+      "quiz": {
+        "title": "Carpentry Trade Fundamentals Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "How many sixteenth-inch marks are in one inch on a tape measure?",
+            "options": ["8", "12", "16", "20"],
+            "correct_index": 2,
+            "explanation": "Each inch is divided into 16 sixteenth-inch spaces, the smallest marks on a standard tape."
+          },
+          {
+            "prompt": "What is the actual size of a nominal 2x4 board after milling?",
+            "options": ["2 by 4 inches", "About 1.5 by 3.5 inches", "1 by 3 inches", "2.5 by 4.5 inches"],
+            "correct_index": 1,
+            "explanation": "A nominal 2x4 actually measures about 1.5 by 3.5 inches after it is milled and dried."
+          },
+          {
+            "prompt": "What is the standard on-center spacing for wall studs in most framing?",
+            "options": ["12 inches", "16 inches", "20 inches", "30 inches"],
+            "correct_index": 1,
+            "explanation": "Studs are most commonly placed 16 inches on center so standard 4-foot sheets land on studs."
+          },
+          {
+            "prompt": "What is 3/8 inch plus 1/4 inch?",
+            "options": ["4/12 inch", "5/8 inch", "1/2 inch", "3/4 inch"],
+            "correct_index": 1,
+            "explanation": "Convert 1/4 to 2/8, then add to 3/8 to get 5/8 inch."
+          },
+          {
+            "prompt": "When two 45-degree cuts are joined, what corner angle do they form?",
+            "options": ["30 degrees", "60 degrees", "90 degrees", "180 degrees"],
+            "correct_index": 2,
+            "explanation": "Two 45-degree miter cuts joined together form a clean 90-degree corner."
+          },
+          {
+            "prompt": "Why do carpenters add a waste factor (about 10 percent) to material estimates?",
+            "options": ["To make the job cost more", "To cover cutting mistakes, bad boards, and offcuts", "Because lumber is sold in tens", "It is required by law"],
+            "correct_index": 1,
+            "explanation": "A waste factor covers cutting errors, defective boards, and offcuts so you do not run short."
+          },
+          {
+            "prompt": "How much area does a standard 4x8 sheet of plywood or drywall cover?",
+            "options": ["16 square feet", "24 square feet", "32 square feet", "48 square feet"],
+            "correct_index": 2,
+            "explanation": "A 4-foot by 8-foot sheet covers 32 square feet (4 times 8)."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "warehouse-and-logistics",
+      "track": "trades",
+      "title": "Warehouse & Logistics",
+      "description": "Learn the core skills of warehouse work: inventory stocking, order picking, barcode scanning, pallet organization, and shipping and receiving.",
+      "tier": "tier_1",
+      "is_trade": true,
+      "icon": "Package",
+      "est_hours": 6,
+      "sequence": 9,
+      "lessons": [
+        {
+          "slug": "warehouse-overview-and-safety",
+          "title": "Warehouse Overview and Safety",
+          "kind": "reading",
+          "sequence": 1,
+          "content": "A warehouse is a building where goods are received, stored, and shipped out. Warehouse and logistics work keeps products moving from manufacturers to stores and customers. It is steady, in-demand work with clear paths to move up.\n\nThe basic flow in most warehouses is: goods arrive at receiving, get stored in their assigned spots, are picked and packed for orders, and then leave through shipping. Your role might focus on one stage or move across several.\n\nSafety is the top priority, because warehouses have moving equipment and heavy loads. Follow these core rules:\n\n- Lift with your legs, not your back. Bend your knees, keep the load close, and avoid twisting.\n- Use equipment like hand trucks, pallet jacks, and carts for heavy items.\n- Stay alert around forklifts and never walk in their blind spots. Make eye contact with operators.\n- Keep aisles clear and clean up spills right away.\n- Wear required PPE, such as steel-toe boots and a safety vest.\n- Stack loads stably and never overload shelves or equipment.\n\nMany warehouses use forklifts, which require special certification to operate. Never run equipment you are not trained and authorized to use.\n\nGood warehouse workers are reliable, accurate, and safety-minded. They show up on time, handle products carefully, and watch out for their coworkers. Building these habits makes you valuable and keeps everyone, including you, safe on a busy floor."
+        },
+        {
+          "slug": "inventory-stocking",
+          "title": "Inventory and Stocking",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "Inventory is all the goods a warehouse holds. Stocking is the work of putting incoming products into their correct storage locations so they can be found and shipped later. Good stocking keeps the whole operation running smoothly.\n\nEvery item has a storage location, often a labeled spot on a specific rack, shelf, and bin. Many warehouses use a slotting system that assigns each product, identified by its SKU (stock keeping unit), to a set location. Putting items in the right spot means the next worker can find them fast.\n\nA key concept is stock rotation, which keeps older products moving out before they expire or get outdated. The most common method is FIFO, or First In, First Out. With FIFO, the oldest stock is placed so it gets picked first, while newer stock goes behind it. This is especially important for food, medicine, and anything with a date.\n\nStocking best practices:\n\n- Verify the product matches the location label before placing it.\n- Place heavier items on lower shelves for safety.\n- Keep labels facing out so they can be scanned and read.\n- Do not block aisles or safety equipment.\n- Report damaged goods instead of stocking them.\n\nAccuracy matters most. A product stocked in the wrong location is effectively lost until someone finds it, which delays orders and frustrates customers. Careful, organized stocking is the foundation of an efficient warehouse, and it makes every job downstream easier."
+        },
+        {
+          "slug": "order-picking-simulation",
+          "title": "Order Picking and Barcode Scanning",
+          "kind": "simulation",
+          "sequence": 3,
+          "content": "In this simulation, you will practice order picking, the process of selecting the right items from storage to fill a customer's order. Picking accuracy is one of the most important measures of a good warehouse worker.\n\nYou will receive a pick list, which tells you what to get, how many, and where they are located. Following the list in order, you will travel to each location, find the item, scan its barcode, and confirm the quantity. The simulation tracks your accuracy and your speed.\n\nBarcode scanning is central to modern picking. A scanner reads the barcode, often a UPC, and checks it against the order in the warehouse system. This catches mistakes before they ship. If you scan the wrong item or the wrong location, the system warns you. Barcodes are extremely reliable, misreading only about once in hundreds of thousands of scans, so a scan error usually means you grabbed the wrong product.\n\nKeys to good picking:\n\n- Read the pick list carefully, including quantity and unit.\n- Scan to verify every item rather than relying on your eyes alone.\n- Follow the efficient route the list suggests to save steps.\n- Double-check the count before moving on.\n- Handle products carefully to avoid damage.\n\nIn the simulation, practice picking complete orders accurately first, then work on speed. In real warehouses, an accurate picker who rarely makes mistakes is highly valued, because every error costs time and money to fix. Aim to get it right, every time.",
+          "sim_type": "order-picking",
+          "sim_inspiration": "https://camcode.com/blog/how-to-implement-barcodes-in-your-warehouse-a-step-by-step-guide/"
+        },
+        {
+          "slug": "pallet-organization",
+          "title": "Pallet Organization",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "A pallet is a flat wooden or plastic platform used to move and store goods in bulk. Forklifts and pallet jacks lift pallets, so organizing them well is essential to safe, efficient warehouse work.\n\nThe most common pallet in North America is the GMA standard, which measures 48 inches by 40 inches. Knowing this standard size helps you plan how products fit and how pallets store on racks.\n\nThe way you stack a pallet, called palletizing, affects safety and product protection. Good practices include:\n\n- Place heavier and sturdier boxes on the bottom, lighter ones on top.\n- Keep the load square and within the edges of the pallet, not overhanging.\n- Build in even layers so the stack is stable.\n- Interlock or column-stack boxes for strength, depending on the product.\n- Keep the load height reasonable so it does not tip.\n\nOnce stacked, loads are usually secured with stretch wrap or banding so nothing shifts during a move. A poorly wrapped or unbalanced pallet can collapse, damaging goods and injuring workers.\n\nEach pallet typically gets a label, sometimes an SSCC barcode under GS1 standards, that identifies its contents so it can be tracked and scanned.\n\nWhen storing pallets on racks, follow weight limits and place them squarely so forks can lift them safely. Well-organized pallets save space, protect products, and make loading and unloading faster. Taking the time to stack and secure a pallet correctly is a mark of a skilled, safety-minded worker."
+        },
+        {
+          "slug": "shipping-and-receiving",
+          "title": "Shipping and Receiving",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Shipping and receiving are the two doors of a warehouse. Receiving brings goods in, and shipping sends orders out. Both require accuracy and attention to detail, because errors here ripple through the whole supply chain.\n\nWhen receiving a shipment, the goal is to confirm you got exactly what was ordered, in good condition. The basic steps are:\n\n- Check the delivery against the packing slip or purchase order.\n- Count the items and verify quantities match.\n- Inspect for damage and note any problems before signing.\n- Scan items into the inventory system so stock counts stay accurate.\n- Move goods to their storage locations or staging area.\n\nIf something is wrong, like a shortage or damaged goods, document it right away. Signing for a bad delivery without noting problems can make the warehouse responsible for the loss.\n\nWhen shipping out, the goal is to send the right items to the right place on time. The steps include:\n\n- Verify the picked and packed order matches the shipping documents.\n- Weigh and label the package with the correct address and tracking.\n- Choose the correct carrier and method as instructed.\n- Load carefully and update the system that the order has shipped.\n\nPaperwork and scanning tie it all together. The packing slip, bill of lading, and tracking labels keep everyone informed about where goods are. Accurate shipping and receiving builds trust with customers and suppliers, and it is the foundation of a smooth-running operation. Take your time, double-check, and document everything."
+        }
+      ],
+      "quiz": {
+        "title": "Warehouse & Logistics Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "What does FIFO stand for in warehouse stock rotation?",
+            "options": ["Fast In, Fast Out", "First In, First Out", "Fragile Items First Off", "Full Inventory For Orders"],
+            "correct_index": 1,
+            "explanation": "FIFO means First In, First Out, so the oldest stock is picked first to prevent it from expiring."
+          },
+          {
+            "prompt": "What is the standard GMA pallet size used in North America?",
+            "options": ["36 by 36 inches", "48 by 40 inches", "60 by 48 inches", "24 by 24 inches"],
+            "correct_index": 1,
+            "explanation": "The standard GMA pallet measures 48 inches by 40 inches."
+          },
+          {
+            "prompt": "When stacking a pallet, where should the heaviest boxes go?",
+            "options": ["On top", "On the bottom", "Hanging over the edges", "It does not matter"],
+            "correct_index": 1,
+            "explanation": "Heavier, sturdier boxes go on the bottom so the load is stable and lighter items are not crushed."
+          },
+          {
+            "prompt": "What is a pick list used for?",
+            "options": ["Tracking employee hours", "Telling a worker what items to get, how many, and where", "Listing broken equipment", "Scheduling deliveries"],
+            "correct_index": 1,
+            "explanation": "A pick list tells the worker which items to select, the quantity, and their storage locations."
+          },
+          {
+            "prompt": "Why is barcode scanning important during order picking?",
+            "options": ["It makes the box heavier", "It verifies you have the correct item before it ships", "It paints the product", "It is only for decoration"],
+            "correct_index": 1,
+            "explanation": "Scanning checks the item against the order and catches mistakes before they ship."
+          },
+          {
+            "prompt": "When receiving a damaged shipment, what should you do?",
+            "options": ["Sign for it without noting anything", "Document the damage before signing", "Throw it away immediately", "Ship it back out to a customer"],
+            "correct_index": 1,
+            "explanation": "Documenting damage before signing protects the warehouse from being held responsible for the loss."
+          },
+          {
+            "prompt": "What is the safe way to lift a heavy box by hand?",
+            "options": ["Bend at the waist and lift with your back", "Lift with your legs, keep the load close, and avoid twisting", "Lift quickly while turning", "Hold it far from your body"],
+            "correct_index": 1,
+            "explanation": "Lifting with your legs, keeping the load close, and not twisting protects your back from injury."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "construction-fundamentals-and-safety",
+      "track": "trades",
+      "title": "Construction Fundamentals & Safety",
+      "description": "Build a strong safety foundation for construction work: selecting PPE, spotting job-site hazards, handling materials, reading blueprints, and using equipment safely.",
+      "tier": "tier_1",
+      "is_trade": true,
+      "icon": "HardHat",
+      "est_hours": 7,
+      "sequence": 10,
+      "lessons": [
+        {
+          "slug": "ppe-selection",
+          "title": "PPE Selection",
+          "kind": "simulation",
+          "sequence": 1,
+          "content": "In this simulation, you will practice selecting the right personal protective equipment, or PPE, for different construction tasks. PPE is the gear that protects your body from job-site hazards, and choosing the correct items can prevent serious injury.\n\nYou will be shown various tasks and hazards, and you will choose the PPE that protects against each. The most common types of PPE include:\n\n- **Hard hat:** protects your head from falling objects and bumps.\n- **Safety glasses or goggles:** shield your eyes from flying debris, dust, and chemicals.\n- **Hearing protection:** earplugs or earmuffs for loud equipment.\n- **Gloves:** protect hands, with different types for cuts, chemicals, or heat.\n- **Steel-toe boots:** guard feet from heavy dropped objects.\n- **High-visibility vest:** makes you easy to see around moving equipment.\n- **Respirator or dust mask:** protects your lungs from dust and fumes.\n- **Fall protection harness:** required when working at height.\n\nIt is important to know that PPE is the last line of defense in safety, not the first. Under the hierarchy of controls, removing or reducing a hazard always comes before relying on PPE. But when a hazard remains, the correct PPE, worn properly and in good condition, is essential.\n\nIn the simulation, match each task to its required PPE and get instant feedback. Pay attention to combinations, since many jobs need several pieces at once. Building the habit of dressing for the hazard, every time, is what keeps experienced workers safe over a long career.",
+          "sim_type": "ppe-selection",
+          "sim_inspiration": "https://phet.colorado.edu/"
+        },
+        {
+          "slug": "jobsite-hazard-identification",
+          "title": "Job-Site Hazard Identification",
+          "kind": "reading",
+          "sequence": 2,
+          "content": "A safe worker is one who can spot hazards before they cause harm. Construction sites change daily, so staying alert and identifying dangers is a constant part of the job.\n\nThe most serious construction hazards are often called the Fatal Four, because they cause the most deaths:\n\n- **Falls:** from roofs, ladders, scaffolds, or floor openings. The leading cause of construction deaths.\n- **Struck-by:** being hit by vehicles, falling objects, or swinging equipment.\n- **Caught-in or between:** getting caught in machinery or trapped between objects, such as in a trench collapse.\n- **Electrocution:** contact with live wires or power lines.\n\nBeyond these, watch for slips and trips from clutter or spills, sharp objects, loud noise, harmful dust, and extreme heat or cold.\n\nTo identify hazards, scan your area before and during work. Ask yourself: What could fall? What could I trip on? Where is the moving equipment? Are there live wires or open holes?\n\nWhen you spot a hazard, take action:\n\n- Fix it if you safely can, like cleaning a spill.\n- Mark or barricade it to warn others.\n- Report it to your supervisor right away.\n\nNever assume someone else will handle it. Many serious incidents happen because a known hazard was ignored. Speaking up about safety is not complaining, it is doing your job well. A crew that watches out for hazards, and for each other, goes home safe every day."
+        },
+        {
+          "slug": "material-handling",
+          "title": "Material Handling",
+          "kind": "reading",
+          "sequence": 3,
+          "content": "Material handling is the work of moving, lifting, and storing the materials a job needs. Done right, it keeps the site efficient and prevents one of the most common construction injuries: back and muscle strains.\n\nManual lifting is a daily task, so safe technique matters. Follow these steps every time:\n\n- Size up the load first. If it is too heavy or awkward, get help or use equipment.\n- Stand close, with feet shoulder-width apart.\n- Bend your knees and keep your back straight, lifting with your legs.\n- Keep the load close to your body.\n- Do not twist while lifting. Turn your whole body by moving your feet.\n- Set the load down with the same care, bending your knees.\n\nFor heavy or bulky items, use the right equipment: a hand truck, dolly, wheelbarrow, pallet jack, or, for large loads, a forklift or crane operated by trained personnel. Working smarter protects your body for the long run.\n\nStoring materials safely is also part of the job:\n\n- Stack materials on stable, level ground.\n- Do not stack too high, since tall stacks can topple.\n- Keep walkways and exits clear.\n- Store flammable and hazardous materials properly and separately.\n\nWhen carrying long items, watch the ends so you do not strike coworkers or equipment. Communicate with your team when lifting together, using a clear count so everyone moves at once. Smart, careful material handling keeps the job moving and keeps you healthy enough to keep working."
+        },
+        {
+          "slug": "blueprint-basics",
+          "title": "Blueprint Basics",
+          "kind": "reading",
+          "sequence": 4,
+          "content": "Blueprints, also called construction drawings or plans, are the maps that tell a crew exactly what to build. Learning to read them lets you work independently and avoid costly mistakes.\n\nA set of plans usually includes several types of drawings:\n\n- **Site plan:** shows the whole property and where the building sits.\n- **Floor plan:** a top-down view of each level, showing walls, doors, windows, and room layouts.\n- **Elevations:** straight-on views of each side of the building.\n- **Sections:** cutaway views showing how parts are built inside.\n- **Detail drawings:** close-ups of specific connections or features.\n\nBlueprints are drawn to scale, meaning a small measurement on paper equals a larger real-world distance. A common scale is 1/4 inch equals 1 foot. A scale ruler helps you read these measurements, though written dimensions on the drawing are always the most accurate, so use them first.\n\nPlans use standard symbols and abbreviations for things like doors, windows, electrical outlets, and plumbing fixtures. A legend on the drawings explains the symbols used. Dimension lines with numbers tell you exact sizes and spacing.\n\nWhen reading a plan, start with the big picture, then zoom into details. Always check the title block in the corner, which lists the project, the drawing name, the scale, and the revision date. Working from the latest revision is critical, since building from an outdated plan wastes time and material. With practice, reading blueprints becomes second nature and makes you a more skilled, valuable worker."
+        },
+        {
+          "slug": "equipment-safety",
+          "title": "Equipment Safety",
+          "kind": "reading",
+          "sequence": 5,
+          "content": "Construction relies on powerful tools and machines that make work faster but can cause serious injury if misused. Equipment safety is about respecting that power and following proven procedures.\n\nThe first rule is simple: never operate equipment you are not trained and authorized to use. Many machines, like forklifts, aerial lifts, and cranes, legally require special certification. Using them without training is dangerous and against the rules.\n\nBefore using any tool or machine, do these checks:\n\n- Inspect it for damage, like frayed cords, cracked housings, or worn parts.\n- Make sure all guards and safety features are in place. Never remove a guard.\n- Check that you have the right PPE for the task.\n- Ensure the area is clear of people and obstacles.\n\nWhile operating, stay focused and follow the manufacturer's instructions. Keep hands and clothing away from moving parts, and never bypass safety devices to work faster. For powered machinery, follow lockout/tagout procedures during maintenance, which means shutting off and locking the energy source so the machine cannot start while you work on it.\n\nLadders and scaffolds deserve special care, since falls are the top cause of construction deaths. Set ladders on firm ground at the correct angle, maintain three points of contact, and never overreach. Make sure scaffolds are built and inspected by qualified people before you climb.\n\nWhen equipment problems arise, tag it out of service and report it. Working safely with equipment protects you and everyone around you, and it is a habit that defines a true professional."
+        }
+      ],
+      "quiz": {
+        "title": "Construction Fundamentals & Safety Quiz",
+        "pass_score": 70,
+        "questions": [
+          {
+            "prompt": "Which PPE protects your head from falling objects on a job site?",
+            "options": ["Safety glasses", "Hard hat", "Gloves", "Ear plugs"],
+            "correct_index": 1,
+            "explanation": "A hard hat protects your head from falling objects and bumps."
+          },
+          {
+            "prompt": "In the hierarchy of controls, where does PPE rank?",
+            "options": ["It is the first and best solution", "It is the last line of defense, used after reducing hazards", "It replaces all other safety measures", "It is never needed"],
+            "correct_index": 1,
+            "explanation": "PPE is the last line of defense; eliminating or reducing a hazard always comes first."
+          },
+          {
+            "prompt": "Which of these is one of OSHA's construction 'Fatal Four' hazards?",
+            "options": ["Paperwork errors", "Falls", "Slow internet", "Loud radios"],
+            "correct_index": 1,
+            "explanation": "Falls are one of the Fatal Four and the leading cause of construction deaths."
+          },
+          {
+            "prompt": "What is the correct way to lift a heavy object manually?",
+            "options": ["Bend your back and lift fast", "Bend your knees, keep your back straight, and lift with your legs", "Twist as you lift", "Hold the load away from your body"],
+            "correct_index": 1,
+            "explanation": "Bending the knees, keeping the back straight, and lifting with the legs protects against strains."
+          },
+          {
+            "prompt": "On a blueprint, what does a scale of '1/4 inch equals 1 foot' mean?",
+            "options": ["The drawing is life-size", "Each 1/4 inch on paper represents 1 foot in real life", "The building is 1/4 inch tall", "Measurements do not matter"],
+            "correct_index": 1,
+            "explanation": "A scale means a small measurement on paper stands for a larger real-world distance."
+          },
+          {
+            "prompt": "Before operating equipment like a forklift, you must:",
+            "options": ["Just figure it out as you go", "Be trained and authorized, often with certification", "Remove the safety guards", "Skip the inspection"],
+            "correct_index": 1,
+            "explanation": "Equipment like forklifts requires proper training and certification before you operate it."
+          },
+          {
+            "prompt": "What does lockout/tagout do?",
+            "options": ["Speeds up the machine", "Locks off the energy source so a machine cannot start during maintenance", "Removes safety guards", "Records work hours"],
+            "correct_index": 1,
+            "explanation": "Lockout/tagout shuts off and locks the energy source so equipment cannot start while being serviced."
+          },
+          {
+            "prompt": "When you spot a hazard you cannot safely fix yourself, you should:",
+            "options": ["Ignore it", "Assume someone else will handle it", "Mark or barricade it and report it to your supervisor", "Keep working around it quietly"],
+            "correct_index": 2,
+            "explanation": "Marking or barricading a hazard and reporting it protects everyone on the site."
+          }
+        ]
+      }
+    }
+  ]
+}

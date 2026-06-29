@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { getMyOrgId } from "@/lib/auth";
 import type {
   Participant,
   ProgramTier,
@@ -43,12 +44,18 @@ export type CaseloadRow = {
 
 export async function getCaseload(): Promise<CaseloadRow[]> {
   const sb = createClient();
+  // App-layer org scoping: staff only see their own org's participants.
+  // super_admin / unassigned (orgId === null) see all.
+  const orgId = await getMyOrgId();
+  let partsQuery = sb
+    .from("participants")
+    .select(
+      `id, participant_code, current_tier, status, region, intake_date, profile:${PROFILE_NAME}`,
+    );
+  if (orgId) partsQuery = partsQuery.eq("organization_id", orgId);
+
   const [partsRes, lessonsRes, attRes] = await Promise.all([
-    sb
-      .from("participants")
-      .select(
-        `id, participant_code, current_tier, status, region, intake_date, profile:${PROFILE_NAME}`,
-      ),
+    partsQuery,
     sb.from("lesson_progress").select("participant_id, status"),
     sb.from("attendance").select("participant_id, session_date, status"),
   ]);

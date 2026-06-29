@@ -4,6 +4,8 @@ import type { Profile, UserRole } from "@/types/db";
 
 export function homePathForRole(role: UserRole): string {
   switch (role) {
+    case "super_admin":
+      return "/iep";
     case "admin":
       return "/admin";
     case "staff":
@@ -52,10 +54,44 @@ export async function requireRole(allowed: UserRole | UserRole[]): Promise<Profi
   }
 
   const allowList = Array.isArray(allowed) ? allowed : [allowed];
+  // IEP master (super_admin) is allowed anywhere an org admin is allowed.
+  if (allowList.includes("admin") && !allowList.includes("super_admin")) {
+    allowList.push("super_admin");
+  }
   if (!allowList.includes(profile.role)) {
     redirect(homePathForRole(profile.role));
   }
   return profile;
+}
+
+/**
+ * Returns the signed-in user's organization id (profiles.organization_id), or
+ * null for super_admin / IEP master (who oversees all orgs) and signed-out users.
+ * Use to scope org-admin / staff queries at the application layer.
+ */
+export async function getMyOrgId(): Promise<string | null> {
+  const session = await getSessionProfile();
+  return session?.profile?.organization_id ?? null;
+}
+
+/**
+ * Returns the current profile's role + organization id, or null when signed out.
+ * Convenience for callers that need both without re-fetching.
+ */
+export async function getRoleAndOrg(): Promise<{
+  role: UserRole;
+  orgId: string | null;
+} | null> {
+  const session = await getSessionProfile();
+  if (!session?.profile) return null;
+  return {
+    role: session.profile.role,
+    orgId: session.profile.organization_id ?? null,
+  };
+}
+
+export function isSuperAdmin(role: UserRole | null | undefined): boolean {
+  return role === "super_admin";
 }
 
 export function firstName(fullName: string | null | undefined): string {

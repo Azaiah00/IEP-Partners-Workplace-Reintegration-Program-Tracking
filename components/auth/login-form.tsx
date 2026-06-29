@@ -17,10 +17,32 @@ const schema = z.object({
 });
 type FormValues = z.infer<typeof schema>;
 
-const DEMO = [
-  { label: "Admin", email: "admin@ieppartners.demo" },
-  { label: "Staff", email: "staff@ieppartners.demo" },
-  { label: "Participant", email: "participant@ieppartners.demo" },
+const DEMO_GROUPS: {
+  group: string;
+  accounts: { label: string; email: string }[];
+}[] = [
+  {
+    group: "IEP Master — oversees all facilities",
+    accounts: [
+      { label: "Michelle · CEO", email: "michelle@ieppartners.demo" },
+      { label: "Dr. Rhonda · Founder", email: "rhonda@ieppartners.demo" },
+    ],
+  },
+  {
+    group: "Facility Admins — see only their org",
+    accounts: [
+      { label: "Newport News", email: "admin.newportnews@ieppartners.demo" },
+      { label: "Greensville", email: "admin.greensville@ieppartners.demo" },
+      { label: "Riverside Regional Jail", email: "admin.riverside@ieppartners.demo" },
+    ],
+  },
+  {
+    group: "Staff & Participant",
+    accounts: [
+      { label: "Case Manager", email: "staff.newportnews@ieppartners.demo" },
+      { label: "Participant", email: "participant@ieppartners.demo" },
+    ],
+  },
 ];
 
 export function LoginForm({ redirectTo }: { redirectTo?: string }) {
@@ -104,23 +126,30 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
         {isSubmitting ? "Signing in…" : "Sign in"}
       </Button>
 
-      <div className="space-y-2 pt-2">
+      <div className="space-y-3 pt-2">
         <p className="text-center text-xs text-muted-foreground">
           Demo accounts — click to fill (password{" "}
           <span className="font-mono text-foreground">Demo1234!</span>)
         </p>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          {DEMO.map((d) => (
-            <button
-              key={d.email}
-              type="button"
-              onClick={() => fillDemo(d.email)}
-              className="rounded-full border border-border bg-card px-2 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
-            >
-              {d.label}
-            </button>
-          ))}
-        </div>
+        {DEMO_GROUPS.map((g) => (
+          <div key={g.group} className="space-y-1.5">
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground/70">
+              {g.group}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {g.accounts.map((d) => (
+                <button
+                  key={d.email}
+                  type="button"
+                  onClick={() => fillDemo(d.email)}
+                  className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                >
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </form>
   );

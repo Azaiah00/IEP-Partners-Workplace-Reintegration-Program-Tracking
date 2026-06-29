@@ -1,34 +1,13 @@
-import {
-  Users,
-  Activity,
-  GraduationCap,
-  Briefcase,
-  ShieldCheck,
-  TriangleAlert,
-  DollarSign,
-  Eye,
-  Footprints,
-  HandCoins,
-} from "lucide-react";
-import { requireRole, firstName } from "@/lib/auth";
+import { BookOpen, GraduationCap, Trophy, CheckCircle2 } from "lucide-react";
+import { requireRole, firstName, getMyOrgId } from "@/lib/auth";
 import { getAdminDashboard } from "@/lib/queries/admin";
+import { getOrgLearningSummary } from "@/lib/queries/courses";
+import { getOrganization } from "@/lib/queries/iep";
 import { GreetingHeader } from "@/components/layout/greeting-header";
+import { AdminDashboardView } from "@/components/admin/dashboard-view";
 import { StatCard } from "@/components/dashboard/stat-card";
-import { TrendChart } from "@/components/dashboard/trend-chart";
-import { RadialProgress } from "@/components/dashboard/radial-progress";
-import { DonutChart } from "@/components/dashboard/donut-chart";
-import { ActivityFeed } from "@/components/dashboard/activity-feed";
-import { RetentionFunnel } from "@/components/admin/retention-funnel";
-import { RegionalTable } from "@/components/admin/regional-table";
 import { ExportButton } from "@/components/admin/export-button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { formatCurrency } from "@/lib/utils";
+import { PdfButton } from "@/components/reports/pdf-button";
 
 export const metadata = { title: "Admin Dashboard · IEP Partners" };
 
@@ -44,216 +23,91 @@ const ROSTER_COLUMNS = [
 
 export default async function AdminDashboard() {
   const profile = await requireRole("admin");
-  const d = await getAdminDashboard();
+  // Org admins are scoped to their own org. (super_admin reaching /admin sees
+  // all orgs since getMyOrgId() returns null for them.)
+  const orgId = await getMyOrgId();
+  const [d, org, learning] = await Promise.all([
+    getAdminDashboard(orgId ?? undefined),
+    orgId ? getOrganization(orgId) : Promise.resolve(null),
+    getOrgLearningSummary(orgId ?? undefined),
+  ]);
   const k = d.kpis;
+
+  const pdfKpis = [
+    { label: "Total Enrolled", value: k.total },
+    { label: "Active", value: k.active },
+    { label: "Completion Rate", value: `${k.completionRate}%` },
+    { label: "Placement Rate", value: `${k.placementRate}%` },
+    { label: "90-Day Retention", value: `${k.retention90}%` },
+    { label: "At Risk", value: k.atRisk },
+    { label: "Paid Work Experience (participants)", value: k.paidWorkParticipants },
+    { label: "Paid Work Hours", value: k.paidWorkHours },
+    { label: "Program Health", value: `${k.programHealth} (${k.programHealthLabel})` },
+  ];
+
+  const reportName = org ? `${org.name} — Program Report` : "Program Report";
 
   return (
     <>
       <GreetingHeader
         firstName={firstName(profile.full_name)}
-        subtitle="Organization-wide view of the Workplace Reintegration Program."
+        subtitle={
+          org
+            ? `${org.name} — Workplace Reintegration Program.`
+            : "Organization-wide view of the Workplace Reintegration Program."
+        }
         actions={
-          <ExportButton
-            rows={d.roster}
-            columns={ROSTER_COLUMNS}
-            filename="iep-participants.csv"
-            label="Export roster"
-          />
+          <>
+            <ExportButton
+              rows={d.roster}
+              columns={ROSTER_COLUMNS}
+              filename="iep-participants.csv"
+              label="Export roster"
+            />
+            <PdfButton
+              mode="dashboard"
+              title={reportName}
+              subtitle={org ? `${org.city ?? ""}${org.city ? ", " : ""}${org.state ?? ""}`.trim() || undefined : undefined}
+              kpis={pdfKpis}
+              rows={{ columns: ROSTER_COLUMNS as any, data: d.roster as any }}
+              filename="iep-admin-report.pdf"
+            />
+          </>
         }
       />
 
-      {/* KPI row */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard
-          label="Total Enrolled"
-          value={k.total}
-          subLabel={`${d.regions.length} regions`}
-          icon={<Users className="h-4 w-4" />}
-        />
-        <StatCard
-          label="Active"
-          value={k.active}
-          subLabel="Currently in curriculum"
-          icon={<Activity className="h-4 w-4" />}
-        />
-        <StatCard
-          label="Completion Rate"
-          value={`${k.completionRate}%`}
-          subLabel="Finished their tier"
-          icon={<GraduationCap className="h-4 w-4" />}
-        />
-        <StatCard
-          label="Placement Rate"
-          value={`${k.placementRate}%`}
-          subLabel={`${k.placedCount} placed · avg ${formatCurrency(k.avgWage)}/hr`}
-          icon={<Briefcase className="h-4 w-4" />}
-        />
+      <AdminDashboardView d={d} />
+
+      {/* Learning (Courses LMS) KPIs */}
+      <div className="space-y-3">
+        <h2 className="text-base font-semibold text-foreground">Learning</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <StatCard
+            label="Course Enrollments"
+            value={learning.enrollments}
+            subLabel={`${learning.coursesCompleted} completed`}
+            icon={<BookOpen className="h-4 w-4" />}
+          />
+          <StatCard
+            label="Avg Course Completion"
+            value={`${learning.avgCompletion}%`}
+            subLabel="Across all enrollments"
+            icon={<GraduationCap className="h-4 w-4" />}
+          />
+          <StatCard
+            label="Quizzes Passed"
+            value={learning.quizzesPassed}
+            subLabel="Passing quiz attempts"
+            icon={<Trophy className="h-4 w-4" />}
+          />
+          <StatCard
+            label="Avg Quiz Score"
+            value={learning.avgQuizScore != null ? `${learning.avgQuizScore}%` : "—"}
+            subLabel="All attempts"
+            icon={<CheckCircle2 className="h-4 w-4" />}
+          />
+        </div>
       </div>
-
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard
-          label="90-Day Retention"
-          value={`${k.retention90}%`}
-          subLabel="Of all placements"
-          icon={<ShieldCheck className="h-4 w-4" />}
-        />
-        <StatCard
-          label="At Risk"
-          value={k.atRisk}
-          subLabel="Attendance / pace flags"
-          icon={<TriangleAlert className="h-4 w-4" />}
-        />
-        <StatCard
-          label="Avg. Placement Wage"
-          value={formatCurrency(k.avgWage)}
-          subLabel="Per hour"
-          icon={<DollarSign className="h-4 w-4" />}
-        />
-        <Card className="spotlight-card border-0 p-5">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium uppercase tracking-wide text-[#5a5440]">
-              Program Health
-            </span>
-          </div>
-          <div className="mt-2 flex flex-col items-center gap-3 sm:flex-row">
-            <RadialProgress
-              value={k.programHealth}
-              size={92}
-              color="#5FA346"
-            />
-            <div>
-              <p className="text-xl font-bold text-[#1a1c22]">
-                {k.programHealthLabel}
-              </p>
-              <p className="text-xs text-[#5a5440]">
-                Attendance · pace · outcomes
-              </p>
-            </div>
-          </div>
-        </Card>
-      </div>
-
-      {/* Trend + tier distribution */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
-          <CardHeader className="flex flex-col gap-3 space-y-0 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <CardTitle>Enrollment &amp; Completion</CardTitle>
-              <CardDescription>Cumulative over the last 10 weeks</CardDescription>
-            </div>
-            <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground sm:gap-4">
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-primary" /> Enrolled
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-2 w-2 rounded-full bg-[#5B9DFF]" /> Modules
-                completed
-              </span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <TrendChart
-              data={d.trend}
-              series={[
-                { key: "enrolled", name: "Enrolled", color: "#A8E55F" },
-                { key: "completed", name: "Modules completed", color: "#5B9DFF" },
-              ]}
-            />
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Tier Distribution</CardTitle>
-            <CardDescription>Participants by active tier</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <DonutChart data={d.tiers} centerLabel="enrolled" />
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Outcomes + participation */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <CardTitle>Retention Funnel</CardTitle>
-            <CardDescription>Placement through 180-day retention</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <RetentionFunnel steps={d.funnel} />
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Work-Based Learning</CardTitle>
-            <CardDescription>Participation by type</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4 pt-2">
-            <ParticipationRow
-              icon={<Eye className="h-4 w-4" />}
-              label="Job Shadowing"
-              value={d.participation.jobShadow}
-            />
-            <ParticipationRow
-              icon={<Footprints className="h-4 w-4" />}
-              label="Work-Based Learning"
-              value={d.participation.wbl}
-            />
-            <ParticipationRow
-              icon={<HandCoins className="h-4 w-4" />}
-              label="Paid Work Experience"
-              value={d.participation.paid}
-            />
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Activity</CardTitle>
-            <CardDescription>Enrollments, completions &amp; placements</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ActivityFeed items={d.activity} />
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Regional reporting */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Regional Reporting</CardTitle>
-          <CardDescription>
-            Enrollment and completion by region (stand-in for state-level rollups)
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <RegionalTable regions={d.regions} />
-        </CardContent>
-      </Card>
     </>
-  );
-}
-
-function ParticipationRow({
-  icon,
-  label,
-  value,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: number;
-}) {
-  return (
-    <div className="flex items-center gap-3">
-      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-raised text-primary">
-        {icon}
-      </span>
-      <span className="flex-1 text-sm text-foreground">{label}</span>
-      <span className="text-lg font-bold tracking-tight text-foreground">
-        {value}
-      </span>
-    </div>
   );
 }

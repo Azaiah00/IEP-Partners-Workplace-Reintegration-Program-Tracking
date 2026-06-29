@@ -8,9 +8,11 @@ import {
   Circle,
   ArrowRight,
   Briefcase,
+  BookOpen,
 } from "lucide-react";
 import { requireRole, firstName } from "@/lib/auth";
 import { getMyOverview } from "@/lib/queries/participant";
+import { getParticipantCourses } from "@/lib/queries/courses";
 import { GreetingHeader } from "@/components/layout/greeting-header";
 import { StatCard } from "@/components/dashboard/stat-card";
 import { RadialProgress } from "@/components/dashboard/radial-progress";
@@ -23,6 +25,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import { TierBadge, StatusBadge } from "@/components/shared/badges";
 import { humanize, cn } from "@/lib/utils";
 
@@ -50,6 +53,11 @@ export default async function ParticipantDashboard() {
   const modulesDone = o.lessons.filter((l) => l.status === "completed").length;
   const milestonesDone = o.milestones.filter((m) => m.status === "achieved").length;
   const wblHours = o.wbl.reduce((s, w) => s + w.hours, 0);
+
+  // Continue-learning: the most recently touched in-progress course.
+  const myCourses = await getParticipantCourses(p.id);
+  const continueCourse =
+    myCourses.find((c) => c.status === "in_progress") ?? myCourses[0] ?? null;
 
   return (
     <>
@@ -173,17 +181,51 @@ export default async function ParticipantDashboard() {
         </Card>
 
         <Card className="flex flex-col justify-between">
-          <CardHeader>
-            <CardTitle>Keep going</CardTitle>
-            <CardDescription>Continue your curriculum</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button asChild className="w-full">
-              <Link href="/me/progress">
-                View my progress <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </CardContent>
+          {continueCourse ? (
+            <>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-4 w-4 text-primary" /> Continue learning
+                </CardTitle>
+                <CardDescription>Pick up where you left off</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {continueCourse.course.title}
+                  </p>
+                  <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
+                    <span>{continueCourse.completion_pct}% complete</span>
+                  </div>
+                  <Progress value={continueCourse.completion_pct} className="mt-1.5 h-1.5" />
+                </div>
+                <Button asChild className="w-full">
+                  <Link href={`/me/courses/${continueCourse.course.slug}`}>
+                    Resume course <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </>
+          ) : (
+            <>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-4 w-4 text-primary" /> Start learning
+                </CardTitle>
+                <CardDescription>Explore self-paced courses</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <Button asChild className="w-full">
+                  <Link href="/me/courses">
+                    Browse courses <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" className="w-full">
+                  <Link href="/me/progress">View my progress</Link>
+                </Button>
+              </CardContent>
+            </>
+          )}
         </Card>
       </div>
     </>

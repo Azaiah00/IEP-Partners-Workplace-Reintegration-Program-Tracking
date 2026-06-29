@@ -7,6 +7,20 @@ curriculum — from intake to employment.
 - **Founder:** Dr. Rhonda Clanton-Davis · **CEO:** Michelle Pettaway
 - **Three roles:** Participant (own record), Staff (caseload), Admin (org-wide).
 - **Three tiers:** Foundation → Career Development → Reintegration & Employment.
+- **Courses LMS:** a self-paced learning catalog grouped into four tracks
+  (Workforce Readiness, Emotional Readiness, Digital Skills, and the Trades),
+  with reading lessons, **interactive trade-simulation** placeholders (wire-color
+  ID, tape-measure reading, order picking, pipe-fitting match, PPE selection,
+  touch-typing), and **graded quizzes** (server-side scoring against a per-course
+  pass mark, per-question explanations, and retakes). A course completes only
+  when every lesson is done *and* its quiz is passed. The Emotional Intelligence
+  course presents its quiz as a gentle **self-reflection check** instead of a
+  pass/fail test. Staff see each participant's course progress + best quiz scores
+  (also in the participant PDF), and admins get org-wide learning KPIs.
+- **Virginia Jobs Engine:** a live Virginia job board, readiness-based fit
+  matching with 0–100 fit scores, an application pipeline (match → hire), and a
+  curated library of Virginia workforce / fair-chance resources. See the
+  dedicated section below.
 
 > Built with Next.js 14 (App Router, RSC), TypeScript, Tailwind, shadcn/ui,
 > Supabase (Postgres + Auth + Storage, **Row-Level Security enforced**),
@@ -51,10 +65,20 @@ single combined file **`supabase/setup.sql`**, and **Run**. It builds everything
 in dependency order (extensions → enums → functions → tables → indexes → triggers
 → RLS → storage).
 
-Prefer separate steps? The same SQL is split into `supabase/migrations/0001_schema.sql`,
-`0002_rls.sql`, `0003_storage.sql`, `0004_participant_reads.sql` — run them in that
-order instead. (`0004` lets participants see their case manager's name; it's also
-included in `setup.sql`.)
+Prefer separate steps? Run the migration files in order:
+
+| File | Purpose |
+|------|---------|
+| `0001_schema.sql` | Core tables + enums |
+| `0002_rls.sql` | Row-level security |
+| `0003_storage.sql` | Document storage bucket |
+| `0004_participant_reads.sql` | Participants can see case manager names |
+| `0006_multi_tenant.sql` | Organizations + super_admin role |
+| `0007_courses.sql` | LMS courses, lessons, quizzes, progress |
+| `0008_jobs_engine.sql` | Virginia jobs + application tracking |
+
+If you already ran an older `setup.sql` (0001–0003 only), apply **0004, 0006, 0007, and 0008**
+in the SQL Editor before `npm run seed`. All files are idempotent.
 
 Everything is idempotent — safe to re-run. Verify with:
 
@@ -99,16 +123,127 @@ npm run dev        # http://localhost:3000
 
 ## Demo logins
 
-> Created by the seed script in Phase 3.
+> Created/refreshed by the seed script (`npm run seed`). **All passwords: `Demo1234!`**
 
-| Role | Email | Password |
-| --- | --- | --- |
-| Admin (Michelle Pettaway) | `admin@ieppartners.demo` | `Demo1234!` |
-| Staff / Case Manager | `staff@ieppartners.demo` | `Demo1234!` |
-| Participant | `participant@ieppartners.demo` | `Demo1234!` |
+**IEP master portal** (`super_admin` → `/iep`) — sees every organization:
+
+| Name | Email |
+| --- | --- |
+| Dr. Rhonda Clanton-Davis | `rhonda@ieppartners.demo` |
+| Michelle Pettaway | `michelle@ieppartners.demo` |
+
+**Org admins** (`admin` → `/admin`) — scoped to their own organization:
+
+| Organization | Email |
+| --- | --- |
+| Newport News Sheriff's Office — Re-Entry | `admin.newportnews@ieppartners.demo` |
+| Greensville Correctional Center | `admin.greensville@ieppartners.demo` |
+| Riverside Regional Jail | `admin.riverside@ieppartners.demo` |
+
+**Org staff / case managers** (`staff` → `/staff`) — see only their org's caseload:
+
+| Organization | Email |
+| --- | --- |
+| Newport News | `staff.newportnews@ieppartners.demo` |
+| Greensville | `staff.greensville@ieppartners.demo` |
+| Riverside | `staff.riverside@ieppartners.demo` |
+
+**Participant** (`participant` → `/me`): `participant@ieppartners.demo` (Newport News).
+
+**Legacy demo logins** (still work): `admin@ieppartners.demo` (admin, Newport News),
+`staff@ieppartners.demo` (staff, Newport News).
 
 After login users are routed by role: participant → `/me`, staff → `/staff`,
-admin → `/admin`.
+admin → `/admin`, super_admin (IEP master) → `/iep`.
+
+---
+
+## Virginia Jobs Engine
+
+A "opportunity engine" that turns program readiness into concrete, fair-chance
+Virginia employment. Built on `0008_jobs_engine.sql` and seeded from
+`supabase/content/va_jobs.json` (12 workforce resources, 7 labor-market sectors,
+26 real-world Virginia opportunities across the trades, CDL, warehouse,
+construction, manufacturing, food service, customer service, and general labor).
+
+**Job board.** Open `job_opportunities` are filterable by region, matched track,
+and fair-chance (`reentry_friendly`) status. Each role carries employer, city /
+region, wage range, employment type, requirements, a `matched_track` tag, and a
+source link.
+
+**Readiness matching (fit scores).** `lib/matching.ts → computeFit()` scores
+each participant against each job from **0–100**:
+
+- **~50% track match** — does a completed/in-progress **trade course** map to the
+  job's `matched_track`? Course→track mapping lives in `lib/matching.ts`
+  (`electrical-trade-fundamentals → trades-electrical`,
+  `warehouse-and-logistics → warehouse`,
+  `construction-fundamentals-and-safety → construction`, plumbing/carpentry
+  similarly). **CDL** jobs require an actual `has_cdl` (a course can't substitute);
+  `general` roles get a modest baseline.
+- **~35% requirement coverage** — each job requirement string is checked
+  heuristically against the participant's readiness signals
+  (`has_drivers_license`, `has_cdl` / `cdl_class`, `transportation_ok`,
+  `bonding_eligible`, achieved milestones such as a finished resume). Soft /
+  learnable requirements ("willing to…", "no experience", "training provided")
+  are treated as non-gating. Unmet hard requirements are surfaced as `missing[]`.
+- **~15% tier alignment** — higher program tier = more job-ready.
+- **+5 bonus** when the job is fair-chance.
+
+Labels: **≥75 "Ready to apply"**, **60–74 "Almost ready"** (with the 1–2 missing
+requirements shown as chips), **<60 "Keep building"**. Scores render as
+accent-green / amber / blue **fit rings**.
+
+**Participant view** (`/me/jobs` → "Opportunities"): matched jobs sorted by fit,
+each with a fit-score ring, label, wage, employer, location, a fair-chance badge,
+missing-requirement chips, and an **"I'm interested"** button (`trackJob`) that
+opens a `job_application`. A sidebar surfaces Virginia workforce resources
+(Virginia Works, Federal Bonding, WOTC, Goodwill re-entry, Honest Jobs,
+registered apprenticeship, …) and in-demand sectors with outlook + typical wages.
+
+**Staff / Admin / IEP view** (`/staff/jobs`, `/admin/jobs`, `/iep/jobs`): a
+three-tab dashboard — (1) the filterable **job board**, (2) the **applications
+pipeline** grouped by status (`matched → interested → preparing → applied →
+interviewing → offer → hired / not_pursued`) with inline status advancement and
+staff notes (`updateApplicationStatus`), and (3) a **"Who's Ready"** matcher that
+scores the caseload against any chosen opportunity and lets staff start preparing
+a strong match. Everything is **org-scoped** via `my_org()` (super_admin / IEP
+sees all).
+
+**Participant detail** (`/staff/participants/[id]`): a compact **Job Matches**
+section shows the participant's top 3 matched jobs + active applications, plus
+editable **readiness flags** (`setReadiness`) — license, transportation, bonding
+eligibility, CDL + class — which immediately recompute matches.
+
+Code map: `lib/matching.ts`, `lib/queries/jobs.ts`, `lib/actions/jobs.ts`,
+`app/{me,staff,admin,iep}/jobs/`, `components/jobs/*`.
+
+---
+
+## Multi-tenant model
+
+IEP Partners (the master organization) oversees multiple **client organizations**
+— correctional facilities, jails, and agencies — each with its own admin, staff,
+and participants. Roles:
+
+- `super_admin` (IEP master) — global view across **all** organizations at `/iep`
+  (master overview, per-org drill-in, cross-org reports).
+- `admin` (org admin) — sees only **their own** organization on `/admin`.
+- `staff` (case manager) — sees only **their own** org's caseload on `/staff`.
+- `participant` — their own record at `/me`.
+
+Each `profiles` and `participants` row carries an `organization_id`. **In this
+phase, org separation for org-admins/staff is enforced at the application/query
+layer** (queries filter by `organization_id`; super_admin's queries are
+unfiltered). RLS stays permissive for staff/admin/super_admin; a later phase will
+tighten RLS to hard org isolation once real auth replaces demo logins. See
+`supabase/migrations/0006_multi_tenant.sql` (orgs, consent fields, helper
+functions `is_super_admin()` / `my_org()`).
+
+Reports: CSV (`lib/csv.ts`) and PDF (`lib/pdf.ts`, jsPDF) exports are available on
+the IEP master overview, IEP org-detail, and admin dashboard (org rollup /
+program reports), plus single-participant PDF reports on the staff participant
+detail page.
 
 ---
 

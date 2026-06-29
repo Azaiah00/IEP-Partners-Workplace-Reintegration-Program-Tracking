@@ -12,14 +12,17 @@ import { TransitionPlanForm } from "@/components/staff/transition-plan-form";
 import { GoalsMilestones } from "@/components/staff/goals-milestones";
 import { OutcomeForm } from "@/components/staff/outcome-form";
 import { WblPanel } from "@/components/staff/wbl-panel";
+import { ParticipantCoursesSummary } from "@/components/courses/participant-courses-summary";
 import { humanize } from "@/lib/utils";
 import type { ParticipantDetail } from "@/lib/queries/staff";
+import type { ParticipantCourseSummary } from "@/lib/queries/courses";
 
 const TABS = [
   "Overview",
   "Attendance",
   "Lessons",
   "Assessments",
+  "Courses & Quizzes",
   "Case Notes",
   "Transition Plan",
   "Goals & Milestones",
@@ -28,7 +31,13 @@ const TABS = [
   "Outcome",
 ] as const;
 
-export function ParticipantTabs({ detail }: { detail: ParticipantDetail }) {
+export function ParticipantTabs({
+  detail,
+  courseSummary,
+}: {
+  detail: ParticipantDetail;
+  courseSummary: ParticipantCourseSummary;
+}) {
   const p = detail.participant;
 
   return (
@@ -144,6 +153,10 @@ export function ParticipantTabs({ detail }: { detail: ParticipantDetail }) {
             </Card>
           )}
         </div>
+      </TabsContent>
+
+      <TabsContent value="Courses & Quizzes">
+        <ParticipantCoursesSummary summary={courseSummary} />
       </TabsContent>
 
       <TabsContent value="Case Notes">

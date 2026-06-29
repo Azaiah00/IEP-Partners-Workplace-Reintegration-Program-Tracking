@@ -6,11 +6,14 @@ import {
   LayoutDashboard,
   Users,
   GraduationCap,
+  BookOpen,
   CalendarCheck,
   BarChart3,
   Briefcase,
+  BriefcaseBusiness,
   Target,
   FileText,
+  Building2,
   Settings,
   LifeBuoy,
   type LucideIcon,
@@ -32,11 +35,14 @@ export type NavIconKey =
   | "dashboard"
   | "participants"
   | "curriculum"
+  | "courses"
   | "attendance"
   | "reports"
   | "employers"
+  | "organizations"
   | "goals"
-  | "documents";
+  | "documents"
+  | "jobs";
 
 export type NavItem = {
   href: string;
@@ -48,11 +54,14 @@ const ICONS: Record<NavIconKey, LucideIcon> = {
   dashboard: LayoutDashboard,
   participants: Users,
   curriculum: GraduationCap,
+  courses: BookOpen,
   attendance: CalendarCheck,
   reports: BarChart3,
   employers: Briefcase,
+  organizations: Building2,
   goals: Target,
   documents: FileText,
+  jobs: BriefcaseBusiness,
 };
 
 export function IconRail({

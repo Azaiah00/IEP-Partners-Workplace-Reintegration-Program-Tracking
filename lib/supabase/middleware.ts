@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import type { Database } from "@/types/db";
 
 /** Routes that require an authenticated session. */
-const PROTECTED_PREFIXES = ["/me", "/staff", "/admin", "/home"];
+const PROTECTED_PREFIXES = ["/me", "/staff", "/admin", "/iep", "/home"];
 
 /**
  * Refreshes the Supabase auth session on every request and guards protected
